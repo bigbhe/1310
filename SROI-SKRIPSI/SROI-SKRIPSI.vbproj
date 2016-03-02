@@ -102,6 +102,7 @@
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Classes\ActiveUser.vb" />
+    <Compile Include="Classes\ClassProject.vb" />
     <Compile Include="Classes\CryptText.vb" />
     <Compile Include="Classes\ReadConfig.vb" />
     <Compile Include="Classes\ClassCompany.vb" />
@@ -112,6 +113,11 @@
     </Compile>
     <Compile Include="Dataset\DataSetCompany.vb">
       <DependentUpon>DataSetCompany.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DataSetProject.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetProject.xsd</DependentUpon>
     </Compile>
     <Compile Include="Form\CompanyDialog.Designer.vb">
       <DependentUpon>CompanyDialog.vb</DependentUpon>
@@ -141,6 +147,12 @@
       <DependentUpon>FormLogin.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\FormLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormProject.Designer.vb">
+      <DependentUpon>FormProject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormProject.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\FormTheme.Designer.vb">
@@ -184,6 +196,9 @@
     <EmbeddedResource Include="Form\FormLogin.resx">
       <DependentUpon>FormLogin.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormProject.resx">
+      <DependentUpon>FormProject.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FormTheme.resx">
       <DependentUpon>FormTheme.vb</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +231,17 @@
     </None>
     <None Include="Dataset\DataSetCompany.xss">
       <DependentUpon>DataSetCompany.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DataSetProject.xsc">
+      <DependentUpon>DataSetProject.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DataSetProject.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetProject.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Dataset\DataSetProject.xss">
+      <DependentUpon>DataSetProject.xsd</DependentUpon>
     </None>
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

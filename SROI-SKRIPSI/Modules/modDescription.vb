@@ -3,6 +3,7 @@
     Public rConfig As New ReadConfig
     Public aUser As New ActiveUser
     Public oCompany As New ClassCompany
+    Public oProject As New ClassProject
     'Public oMstMember As New ClassMstMember
     'Public oTraVisit As New ClassTraVisit
     'Public otraVisit2 As New ClassTraVisit2

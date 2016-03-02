@@ -37,4 +37,13 @@ Partial Public Class SroiMainForm
             FormCompanyList.Show()
         End If
     End Sub
+
+    Private Sub navBarProject_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles navBarProject.LinkClicked
+        If Me.MdiChildren.Contains(FormProject) Then
+            FormProject.Focus()
+        Else
+            FormProject.MdiParent = Me
+            FormProject.Show()
+        End If
+    End Sub
 End Class

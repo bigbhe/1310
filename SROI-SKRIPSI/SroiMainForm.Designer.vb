@@ -39,6 +39,7 @@
         Me.NavBarCompany = New DevExpress.XtraNavBar.NavBarGroup()
         Me.navBarNewCompany = New DevExpress.XtraNavBar.NavBarItem()
         Me.NavBarItem2 = New DevExpress.XtraNavBar.NavBarItem()
+        Me.navBarProject = New DevExpress.XtraNavBar.NavBarItem()
         CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NavBarControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -115,7 +116,7 @@
         Me.NavBarControl1.ActiveGroup = Me.navBarSettings
         Me.NavBarControl1.Dock = System.Windows.Forms.DockStyle.Left
         Me.NavBarControl1.Groups.AddRange(New DevExpress.XtraNavBar.NavBarGroup() {Me.NavBarGroup2, Me.NavBarCompany, Me.navBarSettings})
-        Me.NavBarControl1.Items.AddRange(New DevExpress.XtraNavBar.NavBarItem() {Me.NavBarItem1, Me.navBarNewCompany, Me.NavBarItem2})
+        Me.NavBarControl1.Items.AddRange(New DevExpress.XtraNavBar.NavBarItem() {Me.NavBarItem1, Me.navBarNewCompany, Me.NavBarItem2, Me.navBarProject})
         Me.NavBarControl1.Location = New System.Drawing.Point(0, 29)
         Me.NavBarControl1.Name = "NavBarControl1"
         Me.NavBarControl1.OptionsNavPane.ExpandedWidth = 159
@@ -138,15 +139,15 @@
         '
         'NavBarGroup2
         '
-        Me.NavBarGroup2.Caption = "NavBarGroup2"
+        Me.NavBarGroup2.Caption = "Project"
         Me.NavBarGroup2.Expanded = True
         Me.NavBarGroup2.Name = "NavBarGroup2"
         '
         'NavBarCompany
         '
-        Me.NavBarCompany.Caption = "Company"
+        Me.NavBarCompany.Caption = "Company and Project"
         Me.NavBarCompany.Expanded = True
-        Me.NavBarCompany.ItemLinks.AddRange(New DevExpress.XtraNavBar.NavBarItemLink() {New DevExpress.XtraNavBar.NavBarItemLink(Me.navBarNewCompany), New DevExpress.XtraNavBar.NavBarItemLink(Me.NavBarItem2)})
+        Me.NavBarCompany.ItemLinks.AddRange(New DevExpress.XtraNavBar.NavBarItemLink() {New DevExpress.XtraNavBar.NavBarItemLink(Me.navBarNewCompany), New DevExpress.XtraNavBar.NavBarItemLink(Me.NavBarItem2), New DevExpress.XtraNavBar.NavBarItemLink(Me.navBarProject)})
         Me.NavBarCompany.Name = "NavBarCompany"
         '
         'navBarNewCompany
@@ -158,6 +159,11 @@
         '
         Me.NavBarItem2.Caption = "Company List"
         Me.NavBarItem2.Name = "NavBarItem2"
+        '
+        'navBarProject
+        '
+        Me.navBarProject.Caption = "Project"
+        Me.navBarProject.Name = "navBarProject"
         '
         'SroiMainForm
         '
@@ -195,6 +201,7 @@
     Friend WithEvents SkinBarSubItem1 As DevExpress.XtraBars.SkinBarSubItem
     Friend WithEvents navBarNewCompany As DevExpress.XtraNavBar.NavBarItem
     Friend WithEvents NavBarItem2 As DevExpress.XtraNavBar.NavBarItem
+    Friend WithEvents navBarProject As DevExpress.XtraNavBar.NavBarItem
 
 #End Region
 
