@@ -184,6 +184,7 @@ Partial Class FormCompanyList
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(815, 426)
+        Me.ControlBox = False
         Me.Controls.Add(Me.SimpleButton1)
         Me.Controls.Add(Me.CompanyList_SelectCommandGridControl)
         Me.Name = "FormCompanyList"

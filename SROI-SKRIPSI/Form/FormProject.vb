@@ -1,6 +1,9 @@
 ﻿Public Class FormProject
     Friend Property _FormOpenMode As FormOpenMode
     Private Sub MstProjectDataTableBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles MstProjectDataTableBindingNavigatorSaveItem.Click
+
+        GridView1.SetFocusedRowCellValue(colidUser, aUser.IDUser)
+        GridView1.SetFocusedRowCellValue(colidCompany, oCompany.idCompany)
         Me.Validate()
         Me.MstProjectDataTableBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.DataSetProject)
@@ -21,9 +24,8 @@
     Private Sub BindingNavigatorAddNewItem_Click(sender As Object, e As EventArgs) Handles BindingNavigatorAddNewItem.Click
         'If _FormOpenMode = FormOpenMode.OpenAdd Then MstProjectDataTableBindingNavigatorSaveItem.Enabled = True
         MstProjectDataTableBindingNavigatorSaveItem.Enabled = True
-        GridView1.AddNewRow()
-        GridView1.SetFocusedRowCellValue(colidUser, aUser.IDUser)
-        GridView1.SetFocusedRowCellValue(colidCompany, oCompany.idCompany)
+        'GridView1.AddNewRow()
+
 
     End Sub
 End Class

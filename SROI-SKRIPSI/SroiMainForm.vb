@@ -28,7 +28,7 @@ Partial Public Class SroiMainForm
         End If
     End Sub
 
-    Private Sub NavBarItem2_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NavBarItem2.LinkClicked
+    Private Sub NavBarItem2_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles navBarCompanyList.LinkClicked
 
         If Me.MdiChildren.Contains(FormCompanyList) Then
             FormCompanyList.Focus()
@@ -44,6 +44,13 @@ Partial Public Class SroiMainForm
         Else
             FormProject.MdiParent = Me
             FormProject.Show()
+        End If
+    End Sub
+
+    Private Sub navBarMainIssue_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles navBarMainIssue.LinkClicked
+        If oProject.idProject = 0 Then
+            warningDialog(Me, "No Project Selected, in order to view Teory of Changes" & vbNewLine & "You have to select a project")
+
         End If
     End Sub
 End Class

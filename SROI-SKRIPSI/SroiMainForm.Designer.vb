@@ -34,12 +34,14 @@
         Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
         Me.NavBarControl1 = New DevExpress.XtraNavBar.NavBarControl()
         Me.navBarSettings = New DevExpress.XtraNavBar.NavBarGroup()
-        Me.NavBarItem1 = New DevExpress.XtraNavBar.NavBarItem()
+        Me.navBarTheme = New DevExpress.XtraNavBar.NavBarItem()
         Me.NavBarGroup2 = New DevExpress.XtraNavBar.NavBarGroup()
         Me.NavBarCompany = New DevExpress.XtraNavBar.NavBarGroup()
         Me.navBarNewCompany = New DevExpress.XtraNavBar.NavBarItem()
-        Me.NavBarItem2 = New DevExpress.XtraNavBar.NavBarItem()
+        Me.navBarCompanyList = New DevExpress.XtraNavBar.NavBarItem()
         Me.navBarProject = New DevExpress.XtraNavBar.NavBarItem()
+        Me.navBarMainIssue = New DevExpress.XtraNavBar.NavBarItem()
+        Me.navBarStakeholders = New DevExpress.XtraNavBar.NavBarItem()
         CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NavBarControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -116,11 +118,11 @@
         Me.NavBarControl1.ActiveGroup = Me.navBarSettings
         Me.NavBarControl1.Dock = System.Windows.Forms.DockStyle.Left
         Me.NavBarControl1.Groups.AddRange(New DevExpress.XtraNavBar.NavBarGroup() {Me.NavBarGroup2, Me.NavBarCompany, Me.navBarSettings})
-        Me.NavBarControl1.Items.AddRange(New DevExpress.XtraNavBar.NavBarItem() {Me.NavBarItem1, Me.navBarNewCompany, Me.NavBarItem2, Me.navBarProject})
+        Me.NavBarControl1.Items.AddRange(New DevExpress.XtraNavBar.NavBarItem() {Me.navBarTheme, Me.navBarNewCompany, Me.navBarCompanyList, Me.navBarProject, Me.navBarMainIssue, Me.navBarStakeholders})
         Me.NavBarControl1.Location = New System.Drawing.Point(0, 29)
         Me.NavBarControl1.Name = "NavBarControl1"
-        Me.NavBarControl1.OptionsNavPane.ExpandedWidth = 159
-        Me.NavBarControl1.Size = New System.Drawing.Size(159, 355)
+        Me.NavBarControl1.OptionsNavPane.ExpandedWidth = 182
+        Me.NavBarControl1.Size = New System.Drawing.Size(182, 355)
         Me.NavBarControl1.TabIndex = 5
         Me.NavBarControl1.Text = "NavBarControl1"
         '
@@ -128,26 +130,27 @@
         '
         Me.navBarSettings.Caption = "Settings"
         Me.navBarSettings.Expanded = True
-        Me.navBarSettings.ItemLinks.AddRange(New DevExpress.XtraNavBar.NavBarItemLink() {New DevExpress.XtraNavBar.NavBarItemLink(Me.NavBarItem1)})
+        Me.navBarSettings.ItemLinks.AddRange(New DevExpress.XtraNavBar.NavBarItemLink() {New DevExpress.XtraNavBar.NavBarItemLink(Me.navBarTheme)})
         Me.navBarSettings.Name = "navBarSettings"
         Me.navBarSettings.SmallImage = CType(resources.GetObject("navBarSettings.SmallImage"), System.Drawing.Image)
         '
-        'NavBarItem1
+        'navBarTheme
         '
-        Me.NavBarItem1.Caption = "Theme"
-        Me.NavBarItem1.Name = "NavBarItem1"
+        Me.navBarTheme.Caption = "Theme"
+        Me.navBarTheme.Name = "navBarTheme"
         '
         'NavBarGroup2
         '
-        Me.NavBarGroup2.Caption = "Project"
+        Me.NavBarGroup2.Caption = "Establishing Scope"
         Me.NavBarGroup2.Expanded = True
+        Me.NavBarGroup2.ItemLinks.AddRange(New DevExpress.XtraNavBar.NavBarItemLink() {New DevExpress.XtraNavBar.NavBarItemLink(Me.navBarMainIssue), New DevExpress.XtraNavBar.NavBarItemLink(Me.navBarStakeholders)})
         Me.NavBarGroup2.Name = "NavBarGroup2"
         '
         'NavBarCompany
         '
         Me.NavBarCompany.Caption = "Company and Project"
         Me.NavBarCompany.Expanded = True
-        Me.NavBarCompany.ItemLinks.AddRange(New DevExpress.XtraNavBar.NavBarItemLink() {New DevExpress.XtraNavBar.NavBarItemLink(Me.navBarNewCompany), New DevExpress.XtraNavBar.NavBarItemLink(Me.NavBarItem2), New DevExpress.XtraNavBar.NavBarItemLink(Me.navBarProject)})
+        Me.NavBarCompany.ItemLinks.AddRange(New DevExpress.XtraNavBar.NavBarItemLink() {New DevExpress.XtraNavBar.NavBarItemLink(Me.navBarNewCompany), New DevExpress.XtraNavBar.NavBarItemLink(Me.navBarCompanyList), New DevExpress.XtraNavBar.NavBarItemLink(Me.navBarProject)})
         Me.NavBarCompany.Name = "NavBarCompany"
         '
         'navBarNewCompany
@@ -155,15 +158,25 @@
         Me.navBarNewCompany.Caption = "New Company"
         Me.navBarNewCompany.Name = "navBarNewCompany"
         '
-        'NavBarItem2
+        'navBarCompanyList
         '
-        Me.NavBarItem2.Caption = "Company List"
-        Me.NavBarItem2.Name = "NavBarItem2"
+        Me.navBarCompanyList.Caption = "Company List"
+        Me.navBarCompanyList.Name = "navBarCompanyList"
         '
         'navBarProject
         '
         Me.navBarProject.Caption = "Project"
         Me.navBarProject.Name = "navBarProject"
+        '
+        'navBarMainIssue
+        '
+        Me.navBarMainIssue.Caption = "Main Issue"
+        Me.navBarMainIssue.Name = "navBarMainIssue"
+        '
+        'navBarStakeholders
+        '
+        Me.navBarStakeholders.Caption = "Stakeholders"
+        Me.navBarStakeholders.Name = "navBarStakeholders"
         '
         'SroiMainForm
         '
@@ -197,11 +210,13 @@
     Friend WithEvents navBarSettings As DevExpress.XtraNavBar.NavBarGroup
     Friend WithEvents NavBarGroup2 As DevExpress.XtraNavBar.NavBarGroup
     Friend WithEvents NavBarCompany As DevExpress.XtraNavBar.NavBarGroup
-    Friend WithEvents NavBarItem1 As DevExpress.XtraNavBar.NavBarItem
+    Friend WithEvents navBarTheme As DevExpress.XtraNavBar.NavBarItem
     Friend WithEvents SkinBarSubItem1 As DevExpress.XtraBars.SkinBarSubItem
     Friend WithEvents navBarNewCompany As DevExpress.XtraNavBar.NavBarItem
-    Friend WithEvents NavBarItem2 As DevExpress.XtraNavBar.NavBarItem
+    Friend WithEvents navBarCompanyList As DevExpress.XtraNavBar.NavBarItem
     Friend WithEvents navBarProject As DevExpress.XtraNavBar.NavBarItem
+    Friend WithEvents navBarMainIssue As DevExpress.XtraNavBar.NavBarItem
+    Friend WithEvents navBarStakeholders As DevExpress.XtraNavBar.NavBarItem
 
 #End Region
 

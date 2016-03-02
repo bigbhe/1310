@@ -4,7 +4,6 @@ Public Class FormCompanyList
     Private Sub FormCompanyList_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         SroiMainForm.Text = "Social Return On Investment---" & oCompany.name
     End Sub
-
     Private Sub FormCompanyList_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'DataSetCompany.CompanyList_SelectCommand' table. You can move, or remove it, as needed.
         Me.CompanyList_SelectCommandTableAdapter.Fill(Me.DataSetCompany.CompanyList_SelectCommand)
@@ -34,11 +33,21 @@ Public Class FormCompanyList
 
     Private Sub buttonEdit_Click(sender As Object, e As EventArgs) Handles buttonEdit.Click
         oCompany.idCompany = Convert.ToInt32(GridView1.GetRowCellValue(GridView1.FocusedRowHandle, GridView1.Columns("id")))
-
         FormCompany._formOpenMode = FormOpenMode.OpenEdit
         FormCompany.MdiParent = SroiMainForm
         FormCompany.Show()
         Me.Close()
+    End Sub
 
+    Private Sub FormCompanyList_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        FormProjectList.MdiParent = SroiMainForm
+        FormProject.MdiParent = SroiMainForm
+        If oProject.checkIfProjectExist() = True Then
+            FormProjectList.Show()
+        Else
+            If XtraMessageBox.Show("There is no project data for this company," & vbNewLine & "To continue you have to create atleast one project", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation) = DialogResult.OK Then
+                FormProject.Show()
+            End If
+        End If
     End Sub
 End Class
