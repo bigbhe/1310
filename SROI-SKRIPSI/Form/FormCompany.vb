@@ -17,7 +17,10 @@
 
     Private Sub LoadCompany()
         Try
-            Me.CompanyDataTableTableAdapter.Fill(Me.DataSetCompany.companyDataTable, CType(oCompany.idCompany, Integer))
+            If _formOpenMode = FormOpenMode.OpenEdit Then
+                Me.CompanyDataTableTableAdapter.Fill(Me.DataSetCompany.companyDataTable, CType(oCompany.idCompany, Integer))
+            End If
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -60,8 +63,21 @@
     End Sub
 
     Private Sub countryLookUpEdit_EditValueChanged(sender As Object, e As EventArgs) Handles countryLookUpEdit.EditValueChanged
-        cityLookUpEdit.Properties.DataSource = Nothing
-        cityLookUpEdit.EditValue = -1
-        cityLookUpEdit.Text = ""
+
+        If _formOpenMode = FormOpenMode.OpenAdd Then
+            cityLookUpEdit.Properties.DataSource = Nothing
+            cityLookUpEdit.EditValue = -1
+            cityLookUpEdit.Text = ""
+        End If
+        If countryLookUpEdit.EditValue Is DBNull.Value Then Exit Sub
+
+        Try
+            Me.cityLookUpEdit.Properties.DataSource = Me.CityDataTableBindingSource
+            Me.cityLookUpEdit.Properties.DisplayMember = "city"
+            Me.cityLookUpEdit.Properties.ValueMember = "city"
+            Me.CityDataTableTableAdapter.Fill(Me.DataSetCompany.CityDataTable, countryLookUpEdit.EditValue)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 End Class

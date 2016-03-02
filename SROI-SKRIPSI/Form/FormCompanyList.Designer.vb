@@ -20,6 +20,8 @@ Partial Class FormCompanyList
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormCompanyList))
+        Dim SerializableAppearanceObject1 As DevExpress.Utils.SerializableAppearanceObject = New DevExpress.Utils.SerializableAppearanceObject()
         Me.DataSetCompany = New SROI_SKRIPSI.DataSetCompany()
         Me.CompanyList_SelectCommandBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CompanyList_SelectCommandTableAdapter = New SROI_SKRIPSI.DataSetCompanyTableAdapters.CompanyList_SelectCommandTableAdapter()
@@ -37,11 +39,14 @@ Partial Class FormCompanyList
         Me.colemail = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colwebsite = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colphone = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.buttonEdit = New DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         CType(Me.DataSetCompany, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CompanyList_SelectCommandBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CompanyList_SelectCommandGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.buttonEdit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataSetCompany
@@ -71,13 +76,14 @@ Partial Class FormCompanyList
         Me.CompanyList_SelectCommandGridControl.Location = New System.Drawing.Point(0, 0)
         Me.CompanyList_SelectCommandGridControl.MainView = Me.GridView1
         Me.CompanyList_SelectCommandGridControl.Name = "CompanyList_SelectCommandGridControl"
+        Me.CompanyList_SelectCommandGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.buttonEdit})
         Me.CompanyList_SelectCommandGridControl.Size = New System.Drawing.Size(815, 386)
         Me.CompanyList_SelectCommandGridControl.TabIndex = 1
         Me.CompanyList_SelectCommandGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
         'GridView1
         '
-        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colid, Me.colname, Me.colCountry, Me.colcity, Me.coladdress, Me.colsubsidiary, Me.collogo, Me.colnote, Me.colemail, Me.colwebsite, Me.colphone})
+        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colid, Me.colname, Me.colCountry, Me.colcity, Me.coladdress, Me.colsubsidiary, Me.collogo, Me.colnote, Me.colemail, Me.colwebsite, Me.colphone, Me.GridColumn1})
         Me.GridView1.GridControl = Me.CompanyList_SelectCommandGridControl
         Me.GridView1.Name = "GridView1"
         '
@@ -150,6 +156,21 @@ Partial Class FormCompanyList
         Me.colphone.Visible = True
         Me.colphone.VisibleIndex = 6
         '
+        'GridColumn1
+        '
+        Me.GridColumn1.Caption = "Action"
+        Me.GridColumn1.ColumnEdit = Me.buttonEdit
+        Me.GridColumn1.Name = "GridColumn1"
+        Me.GridColumn1.Visible = True
+        Me.GridColumn1.VisibleIndex = 7
+        '
+        'buttonEdit
+        '
+        Me.buttonEdit.AutoHeight = False
+        Me.buttonEdit.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, True, True, False, DevExpress.XtraEditors.ImageLocation.MiddleCenter, CType(resources.GetObject("buttonEdit.Buttons"), System.Drawing.Image), New DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), SerializableAppearanceObject1, "", Nothing, Nothing, True)})
+        Me.buttonEdit.Name = "buttonEdit"
+        Me.buttonEdit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor
+        '
         'SimpleButton1
         '
         Me.SimpleButton1.Location = New System.Drawing.Point(372, 392)
@@ -172,6 +193,7 @@ Partial Class FormCompanyList
         CType(Me.CompanyList_SelectCommandBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CompanyList_SelectCommandGridControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.buttonEdit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -194,4 +216,6 @@ Partial Class FormCompanyList
     Friend WithEvents colwebsite As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colphone As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents SimpleButton1 As SimpleButton
+    Friend WithEvents GridColumn1 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents buttonEdit As Repository.RepositoryItemButtonEdit
 End Class

@@ -31,4 +31,14 @@ Public Class FormCompanyList
         End If
         Me.Close()
     End Sub
+
+    Private Sub buttonEdit_Click(sender As Object, e As EventArgs) Handles buttonEdit.Click
+        oCompany.idCompany = Convert.ToInt32(GridView1.GetRowCellValue(GridView1.FocusedRowHandle, GridView1.Columns("id")))
+
+        FormCompany._formOpenMode = FormOpenMode.OpenEdit
+        FormCompany.MdiParent = SroiMainForm
+        FormCompany.Show()
+        Me.Close()
+
+    End Sub
 End Class

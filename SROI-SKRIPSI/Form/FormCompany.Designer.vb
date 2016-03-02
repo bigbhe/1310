@@ -353,6 +353,10 @@ Partial Class FormCompany
         Me.emailTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CompanyDataTableBindingSource, "email", True))
         Me.emailTextEdit.Location = New System.Drawing.Point(471, 290)
         Me.emailTextEdit.Name = "emailTextEdit"
+        Me.emailTextEdit.Properties.Mask.BeepOnError = True
+        Me.emailTextEdit.Properties.Mask.EditMask = "(\w|[\.\-])+@(\w|[\-]+\.)*(\w|[\-]){2,63}\.[a-zA-Z]{2,4}"
+        Me.emailTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
+        Me.emailTextEdit.Properties.Mask.ShowPlaceHolders = False
         Me.emailTextEdit.Size = New System.Drawing.Size(214, 20)
         Me.emailTextEdit.StyleController = Me.DataLayoutControl1
         Me.emailTextEdit.TabIndex = 12
@@ -371,6 +375,8 @@ Partial Class FormCompany
         Me.phoneTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.CompanyDataTableBindingSource, "phone", True))
         Me.phoneTextEdit.Location = New System.Drawing.Point(471, 338)
         Me.phoneTextEdit.Name = "phoneTextEdit"
+        Me.phoneTextEdit.Properties.Mask.EditMask = "(\d?\d?\d?\d?) \d\d\d\d-\d\d\d\d"
+        Me.phoneTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular
         Me.phoneTextEdit.Size = New System.Drawing.Size(214, 20)
         Me.phoneTextEdit.StyleController = Me.DataLayoutControl1
         Me.phoneTextEdit.TabIndex = 14
@@ -564,7 +570,7 @@ Partial Class FormCompany
         Me.ItemForphone.Location = New System.Drawing.Point(0, 296)
         Me.ItemForphone.Name = "ItemForphone"
         Me.ItemForphone.Size = New System.Drawing.Size(269, 24)
-        Me.ItemForphone.Text = "phone"
+        Me.ItemForphone.Text = "Phone"
         Me.ItemForphone.TextSize = New System.Drawing.Size(48, 13)
         '
         'EmptySpaceItem1
