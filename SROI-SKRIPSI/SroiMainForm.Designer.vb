@@ -28,21 +28,28 @@
         Me.Bar1 = New DevExpress.XtraBars.Bar()
         Me.Bar3 = New DevExpress.XtraBars.Bar()
         Me.SkinBarSubItem1 = New DevExpress.XtraBars.SkinBarSubItem()
+        Me.BarStaticItem1 = New DevExpress.XtraBars.BarStaticItem()
+        Me.BarMdiChildrenListItem1 = New DevExpress.XtraBars.BarMdiChildrenListItem()
+        Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
         Me.barDockControlTop = New DevExpress.XtraBars.BarDockControl()
         Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
         Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
         Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
+        Me.BarDockingMenuItem1 = New DevExpress.XtraBars.BarDockingMenuItem()
+        Me.BarEditItem1 = New DevExpress.XtraBars.BarEditItem()
+        Me.RepositoryItemButtonEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit()
         Me.NavBarControl1 = New DevExpress.XtraNavBar.NavBarControl()
         Me.navBarSettings = New DevExpress.XtraNavBar.NavBarGroup()
         Me.navBarTheme = New DevExpress.XtraNavBar.NavBarItem()
         Me.NavBarGroup2 = New DevExpress.XtraNavBar.NavBarGroup()
+        Me.navBarMainIssue = New DevExpress.XtraNavBar.NavBarItem()
+        Me.navBarStakeholders = New DevExpress.XtraNavBar.NavBarItem()
         Me.NavBarCompany = New DevExpress.XtraNavBar.NavBarGroup()
         Me.navBarNewCompany = New DevExpress.XtraNavBar.NavBarItem()
         Me.navBarCompanyList = New DevExpress.XtraNavBar.NavBarItem()
         Me.navBarProject = New DevExpress.XtraNavBar.NavBarItem()
-        Me.navBarMainIssue = New DevExpress.XtraNavBar.NavBarItem()
-        Me.navBarStakeholders = New DevExpress.XtraNavBar.NavBarItem()
         CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemButtonEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NavBarControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -54,8 +61,9 @@
         Me.BarManager1.DockControls.Add(Me.barDockControlLeft)
         Me.BarManager1.DockControls.Add(Me.barDockControlRight)
         Me.BarManager1.Form = Me
-        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.SkinBarSubItem1})
-        Me.BarManager1.MaxItemId = 1
+        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.SkinBarSubItem1, Me.BarStaticItem1, Me.BarDockingMenuItem1, Me.BarMdiChildrenListItem1, Me.BarEditItem1, Me.BarButtonItem1})
+        Me.BarManager1.MaxItemId = 6
+        Me.BarManager1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemButtonEdit1})
         Me.BarManager1.StatusBar = Me.Bar3
         '
         'Bar1
@@ -73,7 +81,7 @@
         Me.Bar3.DockCol = 0
         Me.Bar3.DockRow = 0
         Me.Bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom
-        Me.Bar3.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.SkinBarSubItem1)})
+        Me.Bar3.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.SkinBarSubItem1), New DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, Me.BarStaticItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph), New DevExpress.XtraBars.LinkPersistInfo(Me.BarMdiChildrenListItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.BarButtonItem1)})
         Me.Bar3.OptionsBar.AllowQuickCustomization = False
         Me.Bar3.OptionsBar.DrawDragBorder = False
         Me.Bar3.OptionsBar.UseWholeRow = True
@@ -84,6 +92,25 @@
         Me.SkinBarSubItem1.Caption = "Theme"
         Me.SkinBarSubItem1.Id = 0
         Me.SkinBarSubItem1.Name = "SkinBarSubItem1"
+        '
+        'BarStaticItem1
+        '
+        Me.BarStaticItem1.Id = 1
+        Me.BarStaticItem1.Name = "BarStaticItem1"
+        Me.BarStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near
+        '
+        'BarMdiChildrenListItem1
+        '
+        Me.BarMdiChildrenListItem1.Caption = "Open Form"
+        Me.BarMdiChildrenListItem1.Id = 3
+        Me.BarMdiChildrenListItem1.Name = "BarMdiChildrenListItem1"
+        '
+        'BarButtonItem1
+        '
+        Me.BarButtonItem1.Glyph = CType(resources.GetObject("BarButtonItem1.Glyph"), System.Drawing.Image)
+        Me.BarButtonItem1.Id = 5
+        Me.BarButtonItem1.LargeGlyph = CType(resources.GetObject("BarButtonItem1.LargeGlyph"), System.Drawing.Image)
+        Me.BarButtonItem1.Name = "BarButtonItem1"
         '
         'barDockControlTop
         '
@@ -96,22 +123,46 @@
         '
         Me.barDockControlBottom.CausesValidation = False
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 384)
-        Me.barDockControlBottom.Size = New System.Drawing.Size(690, 25)
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 382)
+        Me.barDockControlBottom.Size = New System.Drawing.Size(690, 27)
         '
         'barDockControlLeft
         '
         Me.barDockControlLeft.CausesValidation = False
         Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
         Me.barDockControlLeft.Location = New System.Drawing.Point(0, 29)
-        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 355)
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 353)
         '
         'barDockControlRight
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
         Me.barDockControlRight.Location = New System.Drawing.Point(690, 29)
-        Me.barDockControlRight.Size = New System.Drawing.Size(0, 355)
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 353)
+        '
+        'BarDockingMenuItem1
+        '
+        Me.BarDockingMenuItem1.Caption = "BarDockingMenuItem1"
+        Me.BarDockingMenuItem1.Id = 2
+        Me.BarDockingMenuItem1.Name = "BarDockingMenuItem1"
+        '
+        'BarEditItem1
+        '
+        Me.BarEditItem1.Caption = "Project Information: "
+        Me.BarEditItem1.Edit = Me.RepositoryItemButtonEdit1
+        Me.BarEditItem1.EditWidth = 59
+        Me.BarEditItem1.Glyph = CType(resources.GetObject("BarEditItem1.Glyph"), System.Drawing.Image)
+        Me.BarEditItem1.Id = 4
+        Me.BarEditItem1.LargeGlyph = CType(resources.GetObject("BarEditItem1.LargeGlyph"), System.Drawing.Image)
+        Me.BarEditItem1.Name = "BarEditItem1"
+        '
+        'RepositoryItemButtonEdit1
+        '
+        Me.RepositoryItemButtonEdit1.AutoHeight = False
+        Me.RepositoryItemButtonEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.RepositoryItemButtonEdit1.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat
+        Me.RepositoryItemButtonEdit1.Name = "RepositoryItemButtonEdit1"
+        Me.RepositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
         '
         'NavBarControl1
         '
@@ -122,7 +173,7 @@
         Me.NavBarControl1.Location = New System.Drawing.Point(0, 29)
         Me.NavBarControl1.Name = "NavBarControl1"
         Me.NavBarControl1.OptionsNavPane.ExpandedWidth = 182
-        Me.NavBarControl1.Size = New System.Drawing.Size(182, 355)
+        Me.NavBarControl1.Size = New System.Drawing.Size(182, 353)
         Me.NavBarControl1.TabIndex = 5
         Me.NavBarControl1.Text = "NavBarControl1"
         '
@@ -146,6 +197,16 @@
         Me.NavBarGroup2.ItemLinks.AddRange(New DevExpress.XtraNavBar.NavBarItemLink() {New DevExpress.XtraNavBar.NavBarItemLink(Me.navBarMainIssue), New DevExpress.XtraNavBar.NavBarItemLink(Me.navBarStakeholders)})
         Me.NavBarGroup2.Name = "NavBarGroup2"
         '
+        'navBarMainIssue
+        '
+        Me.navBarMainIssue.Caption = "Main Issue"
+        Me.navBarMainIssue.Name = "navBarMainIssue"
+        '
+        'navBarStakeholders
+        '
+        Me.navBarStakeholders.Caption = "Stakeholders"
+        Me.navBarStakeholders.Name = "navBarStakeholders"
+        '
         'NavBarCompany
         '
         Me.NavBarCompany.Caption = "Company and Project"
@@ -168,16 +229,6 @@
         Me.navBarProject.Caption = "Project"
         Me.navBarProject.Name = "navBarProject"
         '
-        'navBarMainIssue
-        '
-        Me.navBarMainIssue.Caption = "Main Issue"
-        Me.navBarMainIssue.Name = "navBarMainIssue"
-        '
-        'navBarStakeholders
-        '
-        Me.navBarStakeholders.Caption = "Stakeholders"
-        Me.navBarStakeholders.Name = "navBarStakeholders"
-        '
         'SroiMainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -193,6 +244,7 @@
         Me.Text = "Social Return On Investment"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemButtonEdit1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NavBarControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -217,6 +269,12 @@
     Friend WithEvents navBarProject As DevExpress.XtraNavBar.NavBarItem
     Friend WithEvents navBarMainIssue As DevExpress.XtraNavBar.NavBarItem
     Friend WithEvents navBarStakeholders As DevExpress.XtraNavBar.NavBarItem
+    Friend WithEvents BarStaticItem1 As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents BarDockingMenuItem1 As DevExpress.XtraBars.BarDockingMenuItem
+    Friend WithEvents BarMdiChildrenListItem1 As DevExpress.XtraBars.BarMdiChildrenListItem
+    Friend WithEvents BarEditItem1 As DevExpress.XtraBars.BarEditItem
+    Friend WithEvents RepositoryItemButtonEdit1 As Repository.RepositoryItemButtonEdit
+    Friend WithEvents BarButtonItem1 As DevExpress.XtraBars.BarButtonItem
 
 #End Region
 

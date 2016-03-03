@@ -17,11 +17,8 @@ Partial Public Class SroiMainForm
 
 
     Private Sub NavBarItem3_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles navBarNewCompany.LinkClicked
-
-
         If Me.MdiChildren.Contains(FormCompany) Then
             FormCompany.Focus()
-
         Else
             FormCompany.MdiParent = Me
             FormCompany.Show()
@@ -29,7 +26,6 @@ Partial Public Class SroiMainForm
     End Sub
 
     Private Sub NavBarItem2_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles navBarCompanyList.LinkClicked
-
         If Me.MdiChildren.Contains(FormCompanyList) Then
             FormCompanyList.Focus()
         Else
@@ -48,9 +44,20 @@ Partial Public Class SroiMainForm
     End Sub
 
     Private Sub navBarMainIssue_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles navBarMainIssue.LinkClicked
-        If oProject.idProject = 0 Then
+        If oProject.idProject2 = 0 Then
             warningDialog(Me, "No Project Selected, in order to view Teory of Changes" & vbNewLine & "You have to select a project")
-
+        Else
+            If Me.MdiChildren.Contains(FormMainIssue) Then
+                FormMainIssue.Focus()
+            Else
+                FormMainIssue.MdiParent = Me
+                FormMainIssue.Show()
+            End If
         End If
+    End Sub
+
+    Private Sub BarButtonItem1_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem1.ItemClick
+        XtraMessageBox.Show(String.Format("Information{0}Company Name : {1}{0}Project Name: {2}", vbNewLine, oCompany.name, oProject.Name))
+        XtraMessageBox.Show(oProject.idProject)
     End Sub
 End Class

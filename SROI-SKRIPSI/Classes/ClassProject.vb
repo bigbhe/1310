@@ -1,5 +1,6 @@
 ﻿Public Class ClassProject
     Public Property idProject As Integer
+    Public Property idProject2 As Integer
     Public Property idCompany As Integer
     Public Property Name As String
     Public Property Note As String

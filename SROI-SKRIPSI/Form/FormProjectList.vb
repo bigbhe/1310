@@ -32,9 +32,4 @@ Public Class FormProjectList
         oProject.Note = GridView1.GetRowCellValue(GridView1.FocusedRowHandle, GridView1.Columns("note"))
     End Sub
 
-    Private Sub FormProjectList_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        If oProject.idProject = 0 Then
-            e.Cancel = True
-        End If
-    End Sub
 End Class

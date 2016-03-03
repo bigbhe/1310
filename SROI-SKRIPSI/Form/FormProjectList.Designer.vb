@@ -128,6 +128,7 @@ Partial Class FormProjectList
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(700, 443)
+        Me.ControlBox = False
         Me.Controls.Add(Me.buttonSelect)
         Me.Controls.Add(Me.ListProjectDataTableGridControl)
         Me.Name = "FormProjectList"

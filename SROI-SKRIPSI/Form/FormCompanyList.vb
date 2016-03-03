@@ -28,6 +28,9 @@ Public Class FormCompanyList
                 getDetail()
             End If
         End If
+        For Each f As XtraForm In SroiMainForm.MdiChildren
+            f.Close()
+        Next
         Me.Close()
     End Sub
 
@@ -40,14 +43,16 @@ Public Class FormCompanyList
     End Sub
 
     Private Sub FormCompanyList_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        FormProjectList.MdiParent = SroiMainForm
-        FormProject.MdiParent = SroiMainForm
         If oProject.checkIfProjectExist() = True Then
-            FormProjectList.Show()
+            'FormProjectList.MdiParent = SroiMainForm
+            FormProjectList.ShowDialog()
         Else
             If XtraMessageBox.Show("There is no project data for this company," & vbNewLine & "To continue you have to create atleast one project", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation) = DialogResult.OK Then
                 FormProject.Show()
+                FormProject.MdiParent = SroiMainForm
             End If
         End If
+        oProject.idProject2 = oProject.idProject
+        oProject.idProject = 0
     End Sub
 End Class

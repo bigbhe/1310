@@ -12,7 +12,7 @@ Module ModuleAdditional
 
     Public Sub SaveDialog(x As Control)
         Dim alert As New AlertControl
-        alert.Show(x, "Success", "New Data Successfully Saved")
+        alert.Show(x, "Success", "Data Successfully Saved")
     End Sub
 
     Public Sub warningDialog(x As Control, DialogMessage As String)
