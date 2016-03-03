@@ -60,4 +60,17 @@ Partial Public Class SroiMainForm
         XtraMessageBox.Show(String.Format("Information{0}Company Name : {1}{0}Project Name: {2}", vbNewLine, oCompany.name, oProject.Name))
         XtraMessageBox.Show(oProject.idProject)
     End Sub
+
+    Private Sub navBarStakeholders_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles navBarStakeholders.LinkClicked
+        If oProject.idProject2 = 0 Then
+            warningDialog(Me, "No Project Selected, in order to view Stakeholder data" & vbNewLine & "You have to select a project")
+        Else
+            If Me.MdiChildren.Contains(FormStakeholder) Then
+                FormStakeholder.Focus()
+            Else
+                FormStakeholder.MdiParent = Me
+                FormStakeholder.Show()
+            End If
+        End If
+    End Sub
 End Class

@@ -31,5 +31,4 @@ Public Class FormProjectList
         oProject.ProjectDate = GridView1.GetRowCellValue(GridView1.FocusedRowHandle, GridView1.Columns("Date"))
         oProject.Note = GridView1.GetRowCellValue(GridView1.FocusedRowHandle, GridView1.Columns("note"))
     End Sub
-
 End Class

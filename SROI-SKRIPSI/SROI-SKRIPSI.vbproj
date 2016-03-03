@@ -131,6 +131,11 @@
     <Compile Include="Form\CompanyDialog.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Dataset\DataSetStakeholder.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetStakeholder.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form\Expendable.Designer.vb">
       <DependentUpon>Expendable.vb</DependentUpon>
     </Compile>
@@ -171,6 +176,12 @@
       <DependentUpon>FormProjectList.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\FormProjectList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormStakeholder.Designer.vb">
+      <DependentUpon>FormStakeholder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormStakeholder.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\FormTheme.Designer.vb">
@@ -222,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormProjectList.resx">
       <DependentUpon>FormProjectList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormStakeholder.resx">
+      <DependentUpon>FormStakeholder.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormTheme.resx">
       <DependentUpon>FormTheme.vb</DependentUpon>
@@ -277,6 +291,17 @@
     </None>
     <None Include="Dataset\DataSetProject.xss">
       <DependentUpon>DataSetProject.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DataSetStakeholder.xsc">
+      <DependentUpon>DataSetStakeholder.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DataSetStakeholder.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetStakeholder.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Dataset\DataSetStakeholder.xss">
+      <DependentUpon>DataSetStakeholder.xsd</DependentUpon>
     </None>
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
