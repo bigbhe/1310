@@ -102,6 +102,7 @@
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Classes\ActiveUser.vb" />
+    <Compile Include="Classes\ClassInput.vb" />
     <Compile Include="Classes\ClassMainIssue.vb" />
     <Compile Include="Classes\ClassProject.vb" />
     <Compile Include="Classes\CryptText.vb" />
@@ -124,6 +125,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetMainIssue.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DataSetOutcome.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetOutcome.xsd</DependentUpon>
     </Compile>
     <Compile Include="Dataset\DataSetProject.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -169,6 +175,18 @@
       <DependentUpon>FormMainIssue.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\FormMainIssue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormOutcome.Designer.vb">
+      <DependentUpon>FormOutcome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormOutcome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormOutcome2.Designer.vb">
+      <DependentUpon>FormOutcome2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormOutcome2.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\FormProject.Designer.vb">
@@ -238,6 +256,12 @@
     <EmbeddedResource Include="Form\FormMainIssue.resx">
       <DependentUpon>FormMainIssue.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormOutcome.resx">
+      <DependentUpon>FormOutcome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormOutcome2.resx">
+      <DependentUpon>FormOutcome2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FormProject.resx">
       <DependentUpon>FormProject.vb</DependentUpon>
     </EmbeddedResource>
@@ -301,6 +325,17 @@
     </None>
     <None Include="Dataset\DataSetMainIssue.xss">
       <DependentUpon>DataSetMainIssue.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DataSetOutcome.xsc">
+      <DependentUpon>DataSetOutcome.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DataSetOutcome.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetOutcome.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Dataset\DataSetOutcome.xss">
+      <DependentUpon>DataSetOutcome.xsd</DependentUpon>
     </None>
     <None Include="Dataset\DataSetProject.xsc">
       <DependentUpon>DataSetProject.xsd</DependentUpon>
