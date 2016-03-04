@@ -41,13 +41,15 @@
         Me.NavBarControl1 = New DevExpress.XtraNavBar.NavBarControl()
         Me.navBarSettings = New DevExpress.XtraNavBar.NavBarGroup()
         Me.navBarTheme = New DevExpress.XtraNavBar.NavBarItem()
-        Me.NavBarGroup2 = New DevExpress.XtraNavBar.NavBarGroup()
+        Me.navbarEScope = New DevExpress.XtraNavBar.NavBarGroup()
         Me.navBarMainIssue = New DevExpress.XtraNavBar.NavBarItem()
         Me.navBarStakeholders = New DevExpress.XtraNavBar.NavBarItem()
         Me.NavBarCompany = New DevExpress.XtraNavBar.NavBarGroup()
         Me.navBarNewCompany = New DevExpress.XtraNavBar.NavBarItem()
         Me.navBarCompanyList = New DevExpress.XtraNavBar.NavBarItem()
         Me.navBarProject = New DevExpress.XtraNavBar.NavBarItem()
+        Me.navBarImpactMap = New DevExpress.XtraNavBar.NavBarGroup()
+        Me.navBarInput = New DevExpress.XtraNavBar.NavBarItem()
         CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemButtonEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NavBarControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -168,8 +170,8 @@
         '
         Me.NavBarControl1.ActiveGroup = Me.navBarSettings
         Me.NavBarControl1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.NavBarControl1.Groups.AddRange(New DevExpress.XtraNavBar.NavBarGroup() {Me.NavBarGroup2, Me.NavBarCompany, Me.navBarSettings})
-        Me.NavBarControl1.Items.AddRange(New DevExpress.XtraNavBar.NavBarItem() {Me.navBarTheme, Me.navBarNewCompany, Me.navBarCompanyList, Me.navBarProject, Me.navBarMainIssue, Me.navBarStakeholders})
+        Me.NavBarControl1.Groups.AddRange(New DevExpress.XtraNavBar.NavBarGroup() {Me.navbarEScope, Me.navBarImpactMap, Me.NavBarCompany, Me.navBarSettings})
+        Me.NavBarControl1.Items.AddRange(New DevExpress.XtraNavBar.NavBarItem() {Me.navBarTheme, Me.navBarNewCompany, Me.navBarCompanyList, Me.navBarProject, Me.navBarMainIssue, Me.navBarStakeholders, Me.navBarInput})
         Me.NavBarControl1.Location = New System.Drawing.Point(0, 29)
         Me.NavBarControl1.Name = "NavBarControl1"
         Me.NavBarControl1.OptionsNavPane.ExpandedWidth = 182
@@ -190,12 +192,12 @@
         Me.navBarTheme.Caption = "Theme"
         Me.navBarTheme.Name = "navBarTheme"
         '
-        'NavBarGroup2
+        'navbarEScope
         '
-        Me.NavBarGroup2.Caption = "Establishing Scope"
-        Me.NavBarGroup2.Expanded = True
-        Me.NavBarGroup2.ItemLinks.AddRange(New DevExpress.XtraNavBar.NavBarItemLink() {New DevExpress.XtraNavBar.NavBarItemLink(Me.navBarMainIssue), New DevExpress.XtraNavBar.NavBarItemLink(Me.navBarStakeholders)})
-        Me.NavBarGroup2.Name = "NavBarGroup2"
+        Me.navbarEScope.Caption = "Establishing Scope"
+        Me.navbarEScope.Expanded = True
+        Me.navbarEScope.ItemLinks.AddRange(New DevExpress.XtraNavBar.NavBarItemLink() {New DevExpress.XtraNavBar.NavBarItemLink(Me.navBarMainIssue), New DevExpress.XtraNavBar.NavBarItemLink(Me.navBarStakeholders)})
+        Me.navbarEScope.Name = "navbarEScope"
         '
         'navBarMainIssue
         '
@@ -229,6 +231,18 @@
         Me.navBarProject.Caption = "Project"
         Me.navBarProject.Name = "navBarProject"
         '
+        'navBarImpactMap
+        '
+        Me.navBarImpactMap.Caption = "Impact Map"
+        Me.navBarImpactMap.Expanded = True
+        Me.navBarImpactMap.ItemLinks.AddRange(New DevExpress.XtraNavBar.NavBarItemLink() {New DevExpress.XtraNavBar.NavBarItemLink(Me.navBarInput)})
+        Me.navBarImpactMap.Name = "navBarImpactMap"
+        '
+        'navBarInput
+        '
+        Me.navBarInput.Caption = "Input"
+        Me.navBarInput.Name = "navBarInput"
+        '
         'SroiMainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -260,7 +274,7 @@
     Friend WithEvents barDockControlRight As DevExpress.XtraBars.BarDockControl
     Friend WithEvents NavBarControl1 As DevExpress.XtraNavBar.NavBarControl
     Friend WithEvents navBarSettings As DevExpress.XtraNavBar.NavBarGroup
-    Friend WithEvents NavBarGroup2 As DevExpress.XtraNavBar.NavBarGroup
+    Friend WithEvents navbarEScope As DevExpress.XtraNavBar.NavBarGroup
     Friend WithEvents NavBarCompany As DevExpress.XtraNavBar.NavBarGroup
     Friend WithEvents navBarTheme As DevExpress.XtraNavBar.NavBarItem
     Friend WithEvents SkinBarSubItem1 As DevExpress.XtraBars.SkinBarSubItem
@@ -275,6 +289,8 @@
     Friend WithEvents BarEditItem1 As DevExpress.XtraBars.BarEditItem
     Friend WithEvents RepositoryItemButtonEdit1 As Repository.RepositoryItemButtonEdit
     Friend WithEvents BarButtonItem1 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents navBarImpactMap As DevExpress.XtraNavBar.NavBarGroup
+    Friend WithEvents navBarInput As DevExpress.XtraNavBar.NavBarItem
 
 #End Region
 

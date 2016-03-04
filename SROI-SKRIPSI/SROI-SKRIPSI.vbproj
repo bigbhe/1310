@@ -115,6 +115,11 @@
     <Compile Include="Dataset\DataSetCompany.vb">
       <DependentUpon>DataSetCompany.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\DataSetInput.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetInput.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dataset\DataSetMainIssue.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -136,12 +141,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetStakeholder.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form\Expendable.Designer.vb">
-      <DependentUpon>Expendable.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form\Expendable.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form\FormCompany.Designer.vb">
       <DependentUpon>FormCompany.vb</DependentUpon>
     </Compile>
@@ -152,6 +151,12 @@
       <DependentUpon>FormCompanyList.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\FormCompanyList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormInput.Designer.vb">
+      <DependentUpon>FormInput.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormInput.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\FormLogin.Designer.vb">
@@ -190,6 +195,11 @@
     <Compile Include="Form\FormTheme.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SROIDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SROIDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SroiMainForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -213,14 +223,14 @@
     <EmbeddedResource Include="Form\CompanyDialog.resx">
       <DependentUpon>CompanyDialog.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Expendable.resx">
-      <DependentUpon>Expendable.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form\FormCompany.resx">
       <DependentUpon>FormCompany.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormCompanyList.resx">
       <DependentUpon>FormCompanyList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormInput.resx">
+      <DependentUpon>FormInput.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormLogin.resx">
       <DependentUpon>FormLogin.vb</DependentUpon>
@@ -270,6 +280,17 @@
     <None Include="Dataset\DataSetCompany.xss">
       <DependentUpon>DataSetCompany.xsd</DependentUpon>
     </None>
+    <None Include="Dataset\DataSetInput.xsc">
+      <DependentUpon>DataSetInput.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DataSetInput.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetInput.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Dataset\DataSetInput.xss">
+      <DependentUpon>DataSetInput.xsd</DependentUpon>
+    </None>
     <None Include="Dataset\DataSetMainIssue.xsc">
       <DependentUpon>DataSetMainIssue.xsd</DependentUpon>
     </None>
@@ -312,6 +333,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SROIDataSet.xsc">
+      <DependentUpon>SROIDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SROIDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SROIDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SROIDataSet.xss">
+      <DependentUpon>SROIDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">

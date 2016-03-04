@@ -73,4 +73,17 @@ Partial Public Class SroiMainForm
             End If
         End If
     End Sub
+
+    Private Sub navBarInput_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles navBarInput.LinkClicked
+        If oProject.idProject2 = 0 Then
+            warningDialog(Me, "No Project Selected, in order to view Input data" & vbNewLine & "You have to select a project")
+        Else
+            If Me.MdiChildren.Contains(FormInput) Then
+                FormInput.Focus()
+            Else
+                FormInput.MdiParent = Me
+                FormInput.Show()
+            End If
+        End If
+    End Sub
 End Class
