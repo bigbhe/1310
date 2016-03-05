@@ -449,6 +449,7 @@ Partial Class FormStakeholder
         Me.Controls.Add(Me.MstStakeholdersDataTableGridControl)
         Me.Controls.Add(Me.MstStakeholdersDataTableBindingNavigator)
         Me.Name = "FormStakeholder"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormStakeholder"
         CType(Me.DataSetStakeholder, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MstStakeholdersDataTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

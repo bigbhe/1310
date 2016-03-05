@@ -1,6 +1,6 @@
 ﻿Public Class CompanyDialog
     Private Sub buttonCreate_Click(sender As Object, e As EventArgs) Handles buttonCreate.Click
-        FormCompany.Show()
+        FormCompany.ShowDialog()
         Me.Close()
 
     End Sub

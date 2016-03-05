@@ -309,6 +309,7 @@ Partial Class FormInput
         Me.Controls.Add(Me.DataTableInputGridControl)
         Me.Controls.Add(Me.DataTableInputBindingNavigator)
         Me.Name = "FormInput"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormInput"
         CType(Me.DataSetInput, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataTableInputBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

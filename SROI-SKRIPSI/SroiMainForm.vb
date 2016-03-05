@@ -24,16 +24,6 @@ Partial Public Class SroiMainForm
             FormCompany.Show()
         End If
     End Sub
-
-    Private Sub NavBarItem2_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles navBarCompanyList.LinkClicked
-        If Me.MdiChildren.Contains(FormCompanyList) Then
-            FormCompanyList.Focus()
-        Else
-            FormCompanyList.MdiParent = Me
-            FormCompanyList.Show()
-        End If
-    End Sub
-
     Private Sub navBarProject_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles navBarProject.LinkClicked
         If Me.MdiChildren.Contains(FormProject) Then
             FormProject.Focus()
@@ -96,6 +86,31 @@ Partial Public Class SroiMainForm
             Else
                 FormOutcome2.MdiParent = Me
                 FormOutcome2.Show()
+            End If
+        End If
+    End Sub
+
+
+    Private Sub navBarCompanyList_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles navBarCompanyList.LinkClicked
+
+        If Me.MdiChildren.Contains(FormCompanyList) Then
+            FormCompanyList.Focus()
+        Else
+            FormCompanyList.MdiParent = Me
+            FormCompanyList.Show()
+        End If
+
+    End Sub
+
+    Private Sub navbarProxyAndDeadweight_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles navbarProxyAndDeadweight.LinkClicked
+        If oProject.idProject2 = 0 Then
+            warningDialog(Me, "No Project Selected, in order to view Input data" & vbNewLine & "You have to select a project")
+        Else
+            If Me.MdiChildren.Contains(FormProxy) Then
+                FormProxy.Focus()
+            Else
+                FormProxy.MdiParent = Me
+                FormProxy.Show()
             End If
         End If
     End Sub

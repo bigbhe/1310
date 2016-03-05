@@ -5,7 +5,9 @@
     Public oCompany As New ClassCompany
     Public oMainIssue As New ClassMainIssue
     Public oProject As New ClassProject
+    Public oOutcome As New ClassOutcomes
     Public oInput As New ClassInput
+    Public oStakeholder As New ClassStakeholder
     'Public oMstMember As New ClassMstMember
     'Public oTraVisit As New ClassTraVisit
     'Public otraVisit2 As New ClassTraVisit2

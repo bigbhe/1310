@@ -52,7 +52,7 @@ Partial Class CompanyDialog
         '
         'CheckEdit1
         '
-        Me.CheckEdit1.Location = New System.Drawing.Point(10, 172)
+        Me.CheckEdit1.Location = New System.Drawing.Point(12, 123)
         Me.CheckEdit1.Name = "CheckEdit1"
         Me.CheckEdit1.Properties.Caption = "Don't show this dialog anymore, remember my choice"
         Me.CheckEdit1.Size = New System.Drawing.Size(321, 19)
@@ -62,7 +62,7 @@ Partial Class CompanyDialog
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(395, 191)
+        Me.ClientSize = New System.Drawing.Size(391, 163)
         Me.ControlBox = False
         Me.Controls.Add(Me.CheckEdit1)
         Me.Controls.Add(Me.buttonLoad)

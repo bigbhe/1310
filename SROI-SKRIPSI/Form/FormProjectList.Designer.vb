@@ -132,6 +132,7 @@ Partial Class FormProjectList
         Me.Controls.Add(Me.buttonSelect)
         Me.Controls.Add(Me.ListProjectDataTableGridControl)
         Me.Name = "FormProjectList"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormProjectList"
         CType(Me.DataSetProject, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ListProjectDataTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

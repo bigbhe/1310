@@ -50,7 +50,6 @@ Partial Class FormOutcome2
         Me.colQuantity = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colidProject = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colduration = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.spinEditDuration = New DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit()
         Me.memoSource = New DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit()
         Me.memoQuantity = New DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit()
         Me.InputForOutcomeDataTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -80,7 +79,6 @@ Partial Class FormOutcome2
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.memoOutcomes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.memoIndicator, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.spinEditDuration, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.memoSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.memoQuantity, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InputForOutcomeDataTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -226,11 +224,11 @@ Partial Class FormOutcome2
         'OutcomeDataTableGridControl
         '
         Me.OutcomeDataTableGridControl.DataSource = Me.OutcomeDataTableBindingSource
-        Me.OutcomeDataTableGridControl.Location = New System.Drawing.Point(181, 173)
+        Me.OutcomeDataTableGridControl.Location = New System.Drawing.Point(181, 192)
         Me.OutcomeDataTableGridControl.MainView = Me.GridView1
         Me.OutcomeDataTableGridControl.Name = "OutcomeDataTableGridControl"
-        Me.OutcomeDataTableGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.memoOutcomes, Me.memoIndicator, Me.memoSource, Me.memoQuantity, Me.spinEditDuration})
-        Me.OutcomeDataTableGridControl.Size = New System.Drawing.Size(876, 375)
+        Me.OutcomeDataTableGridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.memoOutcomes, Me.memoIndicator, Me.memoSource, Me.memoQuantity})
+        Me.OutcomeDataTableGridControl.Size = New System.Drawing.Size(876, 342)
         Me.OutcomeDataTableGridControl.TabIndex = 2
         Me.OutcomeDataTableGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -280,6 +278,7 @@ Partial Class FormOutcome2
         '
         'colsource
         '
+        Me.colsource.ColumnEdit = Me.memoSource
         Me.colsource.FieldName = "source"
         Me.colsource.Name = "colsource"
         Me.colsource.Visible = True
@@ -299,18 +298,11 @@ Partial Class FormOutcome2
         '
         'colduration
         '
-        Me.colduration.Caption = "Duration in Years"
-        Me.colduration.ColumnEdit = Me.spinEditDuration
+        Me.colduration.Caption = "Duration / Year"
         Me.colduration.FieldName = "duration"
         Me.colduration.Name = "colduration"
         Me.colduration.Visible = True
         Me.colduration.VisibleIndex = 4
-        '
-        'spinEditDuration
-        '
-        Me.spinEditDuration.AutoHeight = False
-        Me.spinEditDuration.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.spinEditDuration.Name = "spinEditDuration"
         '
         'memoSource
         '
@@ -389,7 +381,7 @@ Partial Class FormOutcome2
         Me.GroupControl2.Controls.Add(Me.LabelControl1)
         Me.GroupControl2.Location = New System.Drawing.Point(181, 28)
         Me.GroupControl2.Name = "GroupControl2"
-        Me.GroupControl2.Size = New System.Drawing.Size(876, 139)
+        Me.GroupControl2.Size = New System.Drawing.Size(876, 163)
         Me.GroupControl2.TabIndex = 5
         Me.GroupControl2.Text = "Fill Outcomes Data For :"
         '
@@ -398,13 +390,13 @@ Partial Class FormOutcome2
         Me.memoInput.Location = New System.Drawing.Point(113, 42)
         Me.memoInput.Name = "memoInput"
         Me.memoInput.Properties.ReadOnly = True
-        Me.memoInput.Size = New System.Drawing.Size(399, 40)
+        Me.memoInput.Size = New System.Drawing.Size(297, 49)
         Me.memoInput.TabIndex = 8
         '
         'labelValue
         '
         Me.labelValue.Appearance.Font = New System.Drawing.Font("Tahoma", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelValue.Location = New System.Drawing.Point(615, 42)
+        Me.labelValue.Location = New System.Drawing.Point(426, 42)
         Me.labelValue.Name = "labelValue"
         Me.labelValue.Size = New System.Drawing.Size(80, 39)
         Me.labelValue.TabIndex = 7
@@ -412,7 +404,7 @@ Partial Class FormOutcome2
         '
         'LabelControl5
         '
-        Me.LabelControl5.Location = New System.Drawing.Point(615, 23)
+        Me.LabelControl5.Location = New System.Drawing.Point(426, 23)
         Me.LabelControl5.Name = "LabelControl5"
         Me.LabelControl5.Size = New System.Drawing.Size(33, 13)
         Me.LabelControl5.TabIndex = 6
@@ -420,15 +412,15 @@ Partial Class FormOutcome2
         '
         'memoOutput
         '
-        Me.memoOutput.Location = New System.Drawing.Point(113, 88)
+        Me.memoOutput.Location = New System.Drawing.Point(113, 97)
         Me.memoOutput.Name = "memoOutput"
         Me.memoOutput.Properties.ReadOnly = True
-        Me.memoOutput.Size = New System.Drawing.Size(399, 45)
+        Me.memoOutput.Size = New System.Drawing.Size(297, 61)
         Me.memoOutput.TabIndex = 5
         '
         'LabelControl3
         '
-        Me.LabelControl3.Location = New System.Drawing.Point(13, 89)
+        Me.LabelControl3.Location = New System.Drawing.Point(12, 98)
         Me.LabelControl3.Name = "LabelControl3"
         Me.LabelControl3.Size = New System.Drawing.Size(95, 13)
         Me.LabelControl3.TabIndex = 4
@@ -468,6 +460,7 @@ Partial Class FormOutcome2
         Me.Controls.Add(Me.OutcomeDataTableGridControl)
         Me.Controls.Add(Me.OutcomeDataTableBindingNavigator)
         Me.Name = "FormOutcome2"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormOutcome2"
         CType(Me.DataSetOutcome, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OutcomeDataTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -478,7 +471,6 @@ Partial Class FormOutcome2
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.memoOutcomes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.memoIndicator, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.spinEditDuration, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.memoSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.memoQuantity, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InputForOutcomeDataTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -544,5 +536,4 @@ Partial Class FormOutcome2
     Friend WithEvents colQuantity As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colidProject As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colduration As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents spinEditDuration As Repository.RepositoryItemSpinEdit
 End Class

@@ -598,6 +598,7 @@ Partial Class FormCompany
         Me.Controls.Add(Me.CompanyDataTableGridControl)
         Me.Controls.Add(Me.CompanyDataTableBindingNavigator)
         Me.Name = "FormCompany"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormCompany"
         CType(Me.DataSetCompany, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CompanyDataTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

@@ -46,11 +46,13 @@
         Me.navBarStakeholders = New DevExpress.XtraNavBar.NavBarItem()
         Me.navBarImpactMap = New DevExpress.XtraNavBar.NavBarGroup()
         Me.navBarInput = New DevExpress.XtraNavBar.NavBarItem()
+        Me.navBarOutcome = New DevExpress.XtraNavBar.NavBarItem()
         Me.NavBarCompany = New DevExpress.XtraNavBar.NavBarGroup()
         Me.navBarNewCompany = New DevExpress.XtraNavBar.NavBarItem()
         Me.navBarCompanyList = New DevExpress.XtraNavBar.NavBarItem()
         Me.navBarProject = New DevExpress.XtraNavBar.NavBarItem()
-        Me.navBarOutcome = New DevExpress.XtraNavBar.NavBarItem()
+        Me.NavBarProxy = New DevExpress.XtraNavBar.NavBarGroup()
+        Me.navbarProxyAndDeadweight = New DevExpress.XtraNavBar.NavBarItem()
         CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemButtonEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NavBarControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -171,8 +173,8 @@
         '
         Me.NavBarControl1.ActiveGroup = Me.navBarSettings
         Me.NavBarControl1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.NavBarControl1.Groups.AddRange(New DevExpress.XtraNavBar.NavBarGroup() {Me.navbarEScope, Me.navBarImpactMap, Me.NavBarCompany, Me.navBarSettings})
-        Me.NavBarControl1.Items.AddRange(New DevExpress.XtraNavBar.NavBarItem() {Me.navBarTheme, Me.navBarNewCompany, Me.navBarCompanyList, Me.navBarProject, Me.navBarMainIssue, Me.navBarStakeholders, Me.navBarInput, Me.navBarOutcome})
+        Me.NavBarControl1.Groups.AddRange(New DevExpress.XtraNavBar.NavBarGroup() {Me.navbarEScope, Me.navBarImpactMap, Me.NavBarCompany, Me.navBarSettings, Me.NavBarProxy})
+        Me.NavBarControl1.Items.AddRange(New DevExpress.XtraNavBar.NavBarItem() {Me.navBarTheme, Me.navBarNewCompany, Me.navBarCompanyList, Me.navBarProject, Me.navBarMainIssue, Me.navBarStakeholders, Me.navBarInput, Me.navBarOutcome, Me.navbarProxyAndDeadweight})
         Me.NavBarControl1.Location = New System.Drawing.Point(0, 29)
         Me.NavBarControl1.Name = "NavBarControl1"
         Me.NavBarControl1.OptionsNavPane.ExpandedWidth = 182
@@ -222,6 +224,11 @@
         Me.navBarInput.Caption = "Input"
         Me.navBarInput.Name = "navBarInput"
         '
+        'navBarOutcome
+        '
+        Me.navBarOutcome.Caption = "Outcomes"
+        Me.navBarOutcome.Name = "navBarOutcome"
+        '
         'NavBarCompany
         '
         Me.NavBarCompany.Caption = "Company and Project"
@@ -244,10 +251,17 @@
         Me.navBarProject.Caption = "Project"
         Me.navBarProject.Name = "navBarProject"
         '
-        'navBarOutcome
+        'NavBarProxy
         '
-        Me.navBarOutcome.Caption = "Outcomes"
-        Me.navBarOutcome.Name = "navBarOutcome"
+        Me.NavBarProxy.Caption = "Proxy and Deadweight"
+        Me.NavBarProxy.Expanded = True
+        Me.NavBarProxy.ItemLinks.AddRange(New DevExpress.XtraNavBar.NavBarItemLink() {New DevExpress.XtraNavBar.NavBarItemLink(Me.navbarProxyAndDeadweight)})
+        Me.NavBarProxy.Name = "NavBarProxy"
+        '
+        'navbarProxyAndDeadweight
+        '
+        Me.navbarProxyAndDeadweight.Caption = "Proxy"
+        Me.navbarProxyAndDeadweight.Name = "navbarProxyAndDeadweight"
         '
         'SroiMainForm
         '
@@ -298,6 +312,8 @@
     Friend WithEvents navBarImpactMap As DevExpress.XtraNavBar.NavBarGroup
     Friend WithEvents navBarInput As DevExpress.XtraNavBar.NavBarItem
     Friend WithEvents navBarOutcome As DevExpress.XtraNavBar.NavBarItem
+    Friend WithEvents NavBarProxy As DevExpress.XtraNavBar.NavBarGroup
+    Friend WithEvents navbarProxyAndDeadweight As DevExpress.XtraNavBar.NavBarItem
 
 #End Region
 

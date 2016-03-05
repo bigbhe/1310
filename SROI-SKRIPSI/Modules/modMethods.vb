@@ -12,7 +12,6 @@ Module modMethods
         End If
         Return True
     End Function
-
     Public Function dbClose() As Boolean
         If sqlCnn.State = ConnectionState.Open Then
             Try

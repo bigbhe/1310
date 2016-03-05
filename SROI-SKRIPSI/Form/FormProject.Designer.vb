@@ -40,57 +40,57 @@ Partial Class FormProject
         Me.MstProjectDataTableBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.MstProjectDataTableGridControl = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.DataLayoutControl1 = New DevExpress.XtraDataLayout.DataLayoutControl()
-        Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
-        Me.LayoutControlGroup2 = New DevExpress.XtraLayout.LayoutControlGroup()
-        Me.idSpinEdit = New DevExpress.XtraEditors.SpinEdit()
-        Me.ItemForid = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.NameTextEdit = New DevExpress.XtraEditors.TextEdit()
-        Me.ItemForName = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.idCompanyLookUpEdit = New DevExpress.XtraEditors.LookUpEdit()
-        Me.ItemForidCompany = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.DateDateEdit = New DevExpress.XtraEditors.DateEdit()
-        Me.ItemForDate = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.idUserSpinEdit = New DevExpress.XtraEditors.SpinEdit()
-        Me.ItemForidUser = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.noteMemoEdit = New DevExpress.XtraEditors.MemoEdit()
-        Me.ItemFornote = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.DataSetProject1 = New SROI_SKRIPSI.DataSetProject()
-        Me.CountryForProjectSelectCommandBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CountryForProject_SelectCommandTableAdapter = New SROI_SKRIPSI.DataSetProjectTableAdapters.CountryForProject_SelectCommandTableAdapter()
         Me.colid = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colName = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colidCompany = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.lookUpEditCompany = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
+        Me.CountryForProjectSelectCommandBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSetProject1 = New SROI_SKRIPSI.DataSetProject()
         Me.colDate = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colidUser = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colnote = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.lookUpEditCompany = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
+        Me.DataLayoutControl1 = New DevExpress.XtraDataLayout.DataLayoutControl()
+        Me.idSpinEdit = New DevExpress.XtraEditors.SpinEdit()
+        Me.NameTextEdit = New DevExpress.XtraEditors.TextEdit()
+        Me.idCompanyLookUpEdit = New DevExpress.XtraEditors.LookUpEdit()
+        Me.DateDateEdit = New DevExpress.XtraEditors.DateEdit()
+        Me.idUserSpinEdit = New DevExpress.XtraEditors.SpinEdit()
+        Me.noteMemoEdit = New DevExpress.XtraEditors.MemoEdit()
+        Me.ItemForid = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.ItemForidCompany = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.ItemForidUser = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlGroup2 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.ItemForName = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.ItemForDate = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.ItemFornote = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.CountryForProject_SelectCommandTableAdapter = New SROI_SKRIPSI.DataSetProjectTableAdapters.CountryForProject_SelectCommandTableAdapter()
         CType(Me.DataSetProject, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MstProjectDataTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MstProjectDataTableBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MstProjectDataTableBindingNavigator.SuspendLayout()
         CType(Me.MstProjectDataTableGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lookUpEditCompany, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CountryForProjectSelectCommandBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSetProject1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataLayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.DataLayoutControl1.SuspendLayout()
-        CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlGroup2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.idSpinEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ItemForid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NameTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ItemForName, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.idCompanyLookUpEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ItemForidCompany, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DateDateEdit.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DateDateEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ItemForDate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.idUserSpinEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ItemForidUser, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.noteMemoEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ItemForid, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ItemForidCompany, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ItemForidUser, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlGroup2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ItemForName, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ItemForDate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ItemFornote, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataSetProject1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CountryForProjectSelectCommandBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lookUpEditCompany, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataSetProject
@@ -241,191 +241,6 @@ Partial Class FormProject
         Me.GridView1.GridControl = Me.MstProjectDataTableGridControl
         Me.GridView1.Name = "GridView1"
         '
-        'DataLayoutControl1
-        '
-        Me.DataLayoutControl1.Controls.Add(Me.idSpinEdit)
-        Me.DataLayoutControl1.Controls.Add(Me.NameTextEdit)
-        Me.DataLayoutControl1.Controls.Add(Me.idCompanyLookUpEdit)
-        Me.DataLayoutControl1.Controls.Add(Me.DateDateEdit)
-        Me.DataLayoutControl1.Controls.Add(Me.idUserSpinEdit)
-        Me.DataLayoutControl1.Controls.Add(Me.noteMemoEdit)
-        Me.DataLayoutControl1.DataSource = Me.MstProjectDataTableBindingSource
-        Me.DataLayoutControl1.HiddenItems.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.ItemForid, Me.ItemForidCompany, Me.ItemForidUser})
-        Me.DataLayoutControl1.Location = New System.Drawing.Point(0, 28)
-        Me.DataLayoutControl1.Name = "DataLayoutControl1"
-        Me.DataLayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = New System.Drawing.Rectangle(593, 83, 250, 350)
-        Me.DataLayoutControl1.Root = Me.LayoutControlGroup1
-        Me.DataLayoutControl1.Size = New System.Drawing.Size(333, 253)
-        Me.DataLayoutControl1.TabIndex = 3
-        Me.DataLayoutControl1.Text = "DataLayoutControl1"
-        '
-        'LayoutControlGroup1
-        '
-        Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
-        Me.LayoutControlGroup1.GroupBordersVisible = False
-        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup2})
-        Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlGroup1.Name = "Root"
-        Me.LayoutControlGroup1.Size = New System.Drawing.Size(333, 253)
-        Me.LayoutControlGroup1.TextVisible = False
-        '
-        'LayoutControlGroup2
-        '
-        Me.LayoutControlGroup2.AllowDrawBackground = False
-        Me.LayoutControlGroup2.GroupBordersVisible = False
-        Me.LayoutControlGroup2.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.ItemForName, Me.ItemForDate, Me.ItemFornote})
-        Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlGroup2.Name = "autoGeneratedGroup0"
-        Me.LayoutControlGroup2.Size = New System.Drawing.Size(313, 233)
-        '
-        'idSpinEdit
-        '
-        Me.idSpinEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.MstProjectDataTableBindingSource, "id", True))
-        Me.idSpinEdit.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.idSpinEdit.Location = New System.Drawing.Point(72, 12)
-        Me.idSpinEdit.Name = "idSpinEdit"
-        Me.idSpinEdit.Properties.Appearance.Options.UseTextOptions = True
-        Me.idSpinEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
-        Me.idSpinEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.idSpinEdit.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
-        Me.idSpinEdit.Properties.Mask.EditMask = "N0"
-        Me.idSpinEdit.Properties.Mask.UseMaskAsDisplayFormat = True
-        Me.idSpinEdit.Size = New System.Drawing.Size(249, 20)
-        Me.idSpinEdit.StyleController = Me.DataLayoutControl1
-        Me.idSpinEdit.TabIndex = 4
-        '
-        'ItemForid
-        '
-        Me.ItemForid.Control = Me.idSpinEdit
-        Me.ItemForid.Location = New System.Drawing.Point(0, 0)
-        Me.ItemForid.Name = "ItemForid"
-        Me.ItemForid.Size = New System.Drawing.Size(313, 24)
-        Me.ItemForid.Text = "id"
-        Me.ItemForid.TextSize = New System.Drawing.Size(50, 20)
-        '
-        'NameTextEdit
-        '
-        Me.NameTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.MstProjectDataTableBindingSource, "Name", True))
-        Me.NameTextEdit.Location = New System.Drawing.Point(43, 12)
-        Me.NameTextEdit.Name = "NameTextEdit"
-        Me.NameTextEdit.Size = New System.Drawing.Size(278, 20)
-        Me.NameTextEdit.StyleController = Me.DataLayoutControl1
-        Me.NameTextEdit.TabIndex = 5
-        '
-        'ItemForName
-        '
-        Me.ItemForName.Control = Me.NameTextEdit
-        Me.ItemForName.Location = New System.Drawing.Point(0, 0)
-        Me.ItemForName.Name = "ItemForName"
-        Me.ItemForName.Size = New System.Drawing.Size(313, 24)
-        Me.ItemForName.Text = "Name"
-        Me.ItemForName.TextSize = New System.Drawing.Size(27, 13)
-        '
-        'idCompanyLookUpEdit
-        '
-        Me.idCompanyLookUpEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.MstProjectDataTableBindingSource, "idCompany", True))
-        Me.idCompanyLookUpEdit.Location = New System.Drawing.Point(61, 197)
-        Me.idCompanyLookUpEdit.Name = "idCompanyLookUpEdit"
-        Me.idCompanyLookUpEdit.Properties.Appearance.Options.UseTextOptions = True
-        Me.idCompanyLookUpEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
-        Me.idCompanyLookUpEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.idCompanyLookUpEdit.Properties.DataSource = Me.CountryForProjectSelectCommandBindingSource
-        Me.idCompanyLookUpEdit.Properties.DisplayMember = "name"
-        Me.idCompanyLookUpEdit.Properties.NullText = ""
-        Me.idCompanyLookUpEdit.Properties.ValueMember = "id"
-        Me.idCompanyLookUpEdit.Size = New System.Drawing.Size(260, 20)
-        Me.idCompanyLookUpEdit.StyleController = Me.DataLayoutControl1
-        Me.idCompanyLookUpEdit.TabIndex = 6
-        '
-        'ItemForidCompany
-        '
-        Me.ItemForidCompany.Control = Me.idCompanyLookUpEdit
-        Me.ItemForidCompany.Location = New System.Drawing.Point(0, 185)
-        Me.ItemForidCompany.Name = "ItemForidCompany"
-        Me.ItemForidCompany.Size = New System.Drawing.Size(313, 24)
-        Me.ItemForidCompany.Text = "Company"
-        Me.ItemForidCompany.TextSize = New System.Drawing.Size(50, 20)
-        '
-        'DateDateEdit
-        '
-        Me.DateDateEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.MstProjectDataTableBindingSource, "Date", True))
-        Me.DateDateEdit.EditValue = Nothing
-        Me.DateDateEdit.Location = New System.Drawing.Point(43, 36)
-        Me.DateDateEdit.Name = "DateDateEdit"
-        Me.DateDateEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DateDateEdit.Size = New System.Drawing.Size(278, 20)
-        Me.DateDateEdit.StyleController = Me.DataLayoutControl1
-        Me.DateDateEdit.TabIndex = 7
-        '
-        'ItemForDate
-        '
-        Me.ItemForDate.Control = Me.DateDateEdit
-        Me.ItemForDate.Location = New System.Drawing.Point(0, 24)
-        Me.ItemForDate.Name = "ItemForDate"
-        Me.ItemForDate.Size = New System.Drawing.Size(313, 24)
-        Me.ItemForDate.Text = "Date"
-        Me.ItemForDate.TextSize = New System.Drawing.Size(27, 13)
-        '
-        'idUserSpinEdit
-        '
-        Me.idUserSpinEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.MstProjectDataTableBindingSource, "idUser", True))
-        Me.idUserSpinEdit.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.idUserSpinEdit.Location = New System.Drawing.Point(49, 221)
-        Me.idUserSpinEdit.Name = "idUserSpinEdit"
-        Me.idUserSpinEdit.Properties.Appearance.Options.UseTextOptions = True
-        Me.idUserSpinEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
-        Me.idUserSpinEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.idUserSpinEdit.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
-        Me.idUserSpinEdit.Properties.Mask.EditMask = "N0"
-        Me.idUserSpinEdit.Properties.Mask.UseMaskAsDisplayFormat = True
-        Me.idUserSpinEdit.Size = New System.Drawing.Size(272, 20)
-        Me.idUserSpinEdit.StyleController = Me.DataLayoutControl1
-        Me.idUserSpinEdit.TabIndex = 8
-        '
-        'ItemForidUser
-        '
-        Me.ItemForidUser.Control = Me.idUserSpinEdit
-        Me.ItemForidUser.Location = New System.Drawing.Point(0, 209)
-        Me.ItemForidUser.Name = "ItemForidUser"
-        Me.ItemForidUser.Size = New System.Drawing.Size(313, 24)
-        Me.ItemForidUser.Text = "id User"
-        Me.ItemForidUser.TextSize = New System.Drawing.Size(50, 20)
-        '
-        'noteMemoEdit
-        '
-        Me.noteMemoEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.MstProjectDataTableBindingSource, "note", True))
-        Me.noteMemoEdit.Location = New System.Drawing.Point(12, 76)
-        Me.noteMemoEdit.Name = "noteMemoEdit"
-        Me.noteMemoEdit.Size = New System.Drawing.Size(309, 165)
-        Me.noteMemoEdit.StyleController = Me.DataLayoutControl1
-        Me.noteMemoEdit.TabIndex = 9
-        '
-        'ItemFornote
-        '
-        Me.ItemFornote.Control = Me.noteMemoEdit
-        Me.ItemFornote.Location = New System.Drawing.Point(0, 48)
-        Me.ItemFornote.Name = "ItemFornote"
-        Me.ItemFornote.Size = New System.Drawing.Size(313, 185)
-        Me.ItemFornote.StartNewLine = True
-        Me.ItemFornote.Text = "note"
-        Me.ItemFornote.TextLocation = DevExpress.Utils.Locations.Top
-        Me.ItemFornote.TextSize = New System.Drawing.Size(27, 13)
-        '
-        'DataSetProject1
-        '
-        Me.DataSetProject1.DataSetName = "DataSetProject"
-        Me.DataSetProject1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'CountryForProjectSelectCommandBindingSource
-        '
-        Me.CountryForProjectSelectCommandBindingSource.DataMember = "CountryForProject_SelectCommand"
-        Me.CountryForProjectSelectCommandBindingSource.DataSource = Me.DataSetProject1
-        '
-        'CountryForProject_SelectCommandTableAdapter
-        '
-        Me.CountryForProject_SelectCommandTableAdapter.ClearBeforeFill = True
-        '
         'colid
         '
         Me.colid.FieldName = "id"
@@ -448,6 +263,25 @@ Partial Class FormProject
         Me.colidCompany.Visible = True
         Me.colidCompany.VisibleIndex = 2
         '
+        'lookUpEditCompany
+        '
+        Me.lookUpEditCompany.AutoHeight = False
+        Me.lookUpEditCompany.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.lookUpEditCompany.DataSource = Me.CountryForProjectSelectCommandBindingSource
+        Me.lookUpEditCompany.DisplayMember = "name"
+        Me.lookUpEditCompany.Name = "lookUpEditCompany"
+        Me.lookUpEditCompany.ValueMember = "id"
+        '
+        'CountryForProjectSelectCommandBindingSource
+        '
+        Me.CountryForProjectSelectCommandBindingSource.DataMember = "CountryForProject_SelectCommand"
+        Me.CountryForProjectSelectCommandBindingSource.DataSource = Me.DataSetProject1
+        '
+        'DataSetProject1
+        '
+        Me.DataSetProject1.DataSetName = "DataSetProject"
+        Me.DataSetProject1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'colDate
         '
         Me.colDate.FieldName = "Date"
@@ -467,14 +301,180 @@ Partial Class FormProject
         Me.colnote.Visible = True
         Me.colnote.VisibleIndex = 4
         '
-        'lookUpEditCompany
+        'DataLayoutControl1
         '
-        Me.lookUpEditCompany.AutoHeight = False
-        Me.lookUpEditCompany.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.lookUpEditCompany.DataSource = Me.CountryForProjectSelectCommandBindingSource
-        Me.lookUpEditCompany.DisplayMember = "name"
-        Me.lookUpEditCompany.Name = "lookUpEditCompany"
-        Me.lookUpEditCompany.ValueMember = "id"
+        Me.DataLayoutControl1.Controls.Add(Me.idSpinEdit)
+        Me.DataLayoutControl1.Controls.Add(Me.NameTextEdit)
+        Me.DataLayoutControl1.Controls.Add(Me.idCompanyLookUpEdit)
+        Me.DataLayoutControl1.Controls.Add(Me.DateDateEdit)
+        Me.DataLayoutControl1.Controls.Add(Me.idUserSpinEdit)
+        Me.DataLayoutControl1.Controls.Add(Me.noteMemoEdit)
+        Me.DataLayoutControl1.DataSource = Me.MstProjectDataTableBindingSource
+        Me.DataLayoutControl1.HiddenItems.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.ItemForid, Me.ItemForidCompany, Me.ItemForidUser})
+        Me.DataLayoutControl1.Location = New System.Drawing.Point(0, 28)
+        Me.DataLayoutControl1.Name = "DataLayoutControl1"
+        Me.DataLayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = New System.Drawing.Rectangle(593, 83, 250, 350)
+        Me.DataLayoutControl1.Root = Me.LayoutControlGroup1
+        Me.DataLayoutControl1.Size = New System.Drawing.Size(333, 253)
+        Me.DataLayoutControl1.TabIndex = 3
+        Me.DataLayoutControl1.Text = "DataLayoutControl1"
+        '
+        'idSpinEdit
+        '
+        Me.idSpinEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.MstProjectDataTableBindingSource, "id", True))
+        Me.idSpinEdit.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.idSpinEdit.Location = New System.Drawing.Point(72, 12)
+        Me.idSpinEdit.Name = "idSpinEdit"
+        Me.idSpinEdit.Properties.Appearance.Options.UseTextOptions = True
+        Me.idSpinEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+        Me.idSpinEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.idSpinEdit.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
+        Me.idSpinEdit.Properties.Mask.EditMask = "N0"
+        Me.idSpinEdit.Properties.Mask.UseMaskAsDisplayFormat = True
+        Me.idSpinEdit.Size = New System.Drawing.Size(249, 20)
+        Me.idSpinEdit.StyleController = Me.DataLayoutControl1
+        Me.idSpinEdit.TabIndex = 4
+        '
+        'NameTextEdit
+        '
+        Me.NameTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.MstProjectDataTableBindingSource, "Name", True))
+        Me.NameTextEdit.Location = New System.Drawing.Point(42, 12)
+        Me.NameTextEdit.Name = "NameTextEdit"
+        Me.NameTextEdit.Size = New System.Drawing.Size(279, 20)
+        Me.NameTextEdit.StyleController = Me.DataLayoutControl1
+        Me.NameTextEdit.TabIndex = 5
+        '
+        'idCompanyLookUpEdit
+        '
+        Me.idCompanyLookUpEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.MstProjectDataTableBindingSource, "idCompany", True))
+        Me.idCompanyLookUpEdit.Location = New System.Drawing.Point(61, 197)
+        Me.idCompanyLookUpEdit.Name = "idCompanyLookUpEdit"
+        Me.idCompanyLookUpEdit.Properties.Appearance.Options.UseTextOptions = True
+        Me.idCompanyLookUpEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+        Me.idCompanyLookUpEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.idCompanyLookUpEdit.Properties.DataSource = Me.CountryForProjectSelectCommandBindingSource
+        Me.idCompanyLookUpEdit.Properties.DisplayMember = "name"
+        Me.idCompanyLookUpEdit.Properties.NullText = ""
+        Me.idCompanyLookUpEdit.Properties.ValueMember = "id"
+        Me.idCompanyLookUpEdit.Size = New System.Drawing.Size(260, 20)
+        Me.idCompanyLookUpEdit.StyleController = Me.DataLayoutControl1
+        Me.idCompanyLookUpEdit.TabIndex = 6
+        '
+        'DateDateEdit
+        '
+        Me.DateDateEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.MstProjectDataTableBindingSource, "Date", True))
+        Me.DateDateEdit.EditValue = Nothing
+        Me.DateDateEdit.Location = New System.Drawing.Point(42, 36)
+        Me.DateDateEdit.Name = "DateDateEdit"
+        Me.DateDateEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DateDateEdit.Size = New System.Drawing.Size(279, 20)
+        Me.DateDateEdit.StyleController = Me.DataLayoutControl1
+        Me.DateDateEdit.TabIndex = 7
+        '
+        'idUserSpinEdit
+        '
+        Me.idUserSpinEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.MstProjectDataTableBindingSource, "idUser", True))
+        Me.idUserSpinEdit.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.idUserSpinEdit.Location = New System.Drawing.Point(49, 221)
+        Me.idUserSpinEdit.Name = "idUserSpinEdit"
+        Me.idUserSpinEdit.Properties.Appearance.Options.UseTextOptions = True
+        Me.idUserSpinEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far
+        Me.idUserSpinEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.idUserSpinEdit.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
+        Me.idUserSpinEdit.Properties.Mask.EditMask = "N0"
+        Me.idUserSpinEdit.Properties.Mask.UseMaskAsDisplayFormat = True
+        Me.idUserSpinEdit.Size = New System.Drawing.Size(272, 20)
+        Me.idUserSpinEdit.StyleController = Me.DataLayoutControl1
+        Me.idUserSpinEdit.TabIndex = 8
+        '
+        'noteMemoEdit
+        '
+        Me.noteMemoEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.MstProjectDataTableBindingSource, "note", True))
+        Me.noteMemoEdit.Location = New System.Drawing.Point(12, 76)
+        Me.noteMemoEdit.Name = "noteMemoEdit"
+        Me.noteMemoEdit.Size = New System.Drawing.Size(309, 165)
+        Me.noteMemoEdit.StyleController = Me.DataLayoutControl1
+        Me.noteMemoEdit.TabIndex = 9
+        '
+        'ItemForid
+        '
+        Me.ItemForid.Control = Me.idSpinEdit
+        Me.ItemForid.Location = New System.Drawing.Point(0, 0)
+        Me.ItemForid.Name = "ItemForid"
+        Me.ItemForid.Size = New System.Drawing.Size(313, 24)
+        Me.ItemForid.Text = "id"
+        Me.ItemForid.TextSize = New System.Drawing.Size(50, 20)
+        '
+        'ItemForidCompany
+        '
+        Me.ItemForidCompany.Control = Me.idCompanyLookUpEdit
+        Me.ItemForidCompany.Location = New System.Drawing.Point(0, 185)
+        Me.ItemForidCompany.Name = "ItemForidCompany"
+        Me.ItemForidCompany.Size = New System.Drawing.Size(313, 24)
+        Me.ItemForidCompany.Text = "Company"
+        Me.ItemForidCompany.TextSize = New System.Drawing.Size(50, 20)
+        '
+        'ItemForidUser
+        '
+        Me.ItemForidUser.Control = Me.idUserSpinEdit
+        Me.ItemForidUser.Location = New System.Drawing.Point(0, 209)
+        Me.ItemForidUser.Name = "ItemForidUser"
+        Me.ItemForidUser.Size = New System.Drawing.Size(313, 24)
+        Me.ItemForidUser.Text = "id User"
+        Me.ItemForidUser.TextSize = New System.Drawing.Size(50, 20)
+        '
+        'LayoutControlGroup1
+        '
+        Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
+        Me.LayoutControlGroup1.GroupBordersVisible = False
+        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup2})
+        Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlGroup1.Name = "Root"
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(333, 253)
+        Me.LayoutControlGroup1.TextVisible = False
+        '
+        'LayoutControlGroup2
+        '
+        Me.LayoutControlGroup2.AllowDrawBackground = False
+        Me.LayoutControlGroup2.GroupBordersVisible = False
+        Me.LayoutControlGroup2.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.ItemForName, Me.ItemForDate, Me.ItemFornote})
+        Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlGroup2.Name = "autoGeneratedGroup0"
+        Me.LayoutControlGroup2.Size = New System.Drawing.Size(313, 233)
+        '
+        'ItemForName
+        '
+        Me.ItemForName.Control = Me.NameTextEdit
+        Me.ItemForName.Location = New System.Drawing.Point(0, 0)
+        Me.ItemForName.Name = "ItemForName"
+        Me.ItemForName.Size = New System.Drawing.Size(313, 24)
+        Me.ItemForName.Text = "Name"
+        Me.ItemForName.TextSize = New System.Drawing.Size(27, 13)
+        '
+        'ItemForDate
+        '
+        Me.ItemForDate.Control = Me.DateDateEdit
+        Me.ItemForDate.Location = New System.Drawing.Point(0, 24)
+        Me.ItemForDate.Name = "ItemForDate"
+        Me.ItemForDate.Size = New System.Drawing.Size(313, 24)
+        Me.ItemForDate.Text = "Date"
+        Me.ItemForDate.TextSize = New System.Drawing.Size(27, 13)
+        '
+        'ItemFornote
+        '
+        Me.ItemFornote.Control = Me.noteMemoEdit
+        Me.ItemFornote.Location = New System.Drawing.Point(0, 48)
+        Me.ItemFornote.Name = "ItemFornote"
+        Me.ItemFornote.Size = New System.Drawing.Size(313, 185)
+        Me.ItemFornote.StartNewLine = True
+        Me.ItemFornote.Text = "note"
+        Me.ItemFornote.TextLocation = DevExpress.Utils.Locations.Top
+        Me.ItemFornote.TextSize = New System.Drawing.Size(27, 13)
+        '
+        'CountryForProject_SelectCommandTableAdapter
+        '
+        Me.CountryForProject_SelectCommandTableAdapter.ClearBeforeFill = True
         '
         'FormProject
         '
@@ -485,6 +485,7 @@ Partial Class FormProject
         Me.Controls.Add(Me.MstProjectDataTableGridControl)
         Me.Controls.Add(Me.MstProjectDataTableBindingNavigator)
         Me.Name = "FormProject"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormProject"
         CType(Me.DataSetProject, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MstProjectDataTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -493,26 +494,26 @@ Partial Class FormProject
         Me.MstProjectDataTableBindingNavigator.PerformLayout()
         CType(Me.MstProjectDataTableGridControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lookUpEditCompany, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CountryForProjectSelectCommandBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSetProject1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataLayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.DataLayoutControl1.ResumeLayout(False)
-        CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlGroup2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.idSpinEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ItemForid, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NameTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ItemForName, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.idCompanyLookUpEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ItemForidCompany, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DateDateEdit.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DateDateEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ItemForDate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.idUserSpinEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ItemForidUser, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.noteMemoEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ItemForid, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ItemForidCompany, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ItemForidUser, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlGroup2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ItemForName, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ItemForDate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ItemFornote, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataSetProject1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CountryForProjectSelectCommandBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lookUpEditCompany, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

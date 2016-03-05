@@ -19,7 +19,7 @@ Public Class FormOutcome2
     Private Sub FormOutcome2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         loadDataInput()
         loadDataOutcome()
-
+        GridView1.BestFitColumns(True)
     End Sub
 
     Sub loadDataInput()
@@ -32,7 +32,6 @@ Public Class FormOutcome2
     Sub loadDataOutcome()
         Try
             Me.OutcomeDataTableTableAdapter.Fill(Me.DataSetOutcome.outcomeDataTable, New Nullable(Of Integer)(CType(oInput.idStakeholder, Integer)))
-            GridView1.BestFitColumns(True)
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try

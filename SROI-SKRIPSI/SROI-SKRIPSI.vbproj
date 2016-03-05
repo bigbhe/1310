@@ -104,7 +104,9 @@
     <Compile Include="Classes\ActiveUser.vb" />
     <Compile Include="Classes\ClassInput.vb" />
     <Compile Include="Classes\ClassMainIssue.vb" />
+    <Compile Include="Classes\ClassOutcomes.vb" />
     <Compile Include="Classes\ClassProject.vb" />
+    <Compile Include="Classes\ClassStakeholder.vb" />
     <Compile Include="Classes\CryptText.vb" />
     <Compile Include="Classes\ReadConfig.vb" />
     <Compile Include="Classes\ClassCompany.vb" />
@@ -135,6 +137,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetProject.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DataSetProxy.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetProxy.xsd</DependentUpon>
     </Compile>
     <Compile Include="Form\CompanyDialog.Designer.vb">
       <DependentUpon>CompanyDialog.vb</DependentUpon>
@@ -199,6 +206,12 @@
       <DependentUpon>FormProjectList.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\FormProjectList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormProxy.Designer.vb">
+      <DependentUpon>FormProxy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormProxy.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\FormStakeholder.Designer.vb">
@@ -267,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormProjectList.resx">
       <DependentUpon>FormProjectList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormProxy.resx">
+      <DependentUpon>FormProxy.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormStakeholder.resx">
       <DependentUpon>FormStakeholder.vb</DependentUpon>
@@ -347,6 +363,17 @@
     </None>
     <None Include="Dataset\DataSetProject.xss">
       <DependentUpon>DataSetProject.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DataSetProxy.xsc">
+      <DependentUpon>DataSetProxy.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DataSetProxy.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetProxy.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Dataset\DataSetProxy.xss">
+      <DependentUpon>DataSetProxy.xsd</DependentUpon>
     </None>
     <None Include="Dataset\DataSetStakeholder.xsc">
       <DependentUpon>DataSetStakeholder.xsd</DependentUpon>

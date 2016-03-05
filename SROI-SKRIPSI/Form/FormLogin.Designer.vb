@@ -79,6 +79,7 @@ Partial Class FormLogin
         Me.Controls.Add(Me.textEditPassword)
         Me.Controls.Add(Me.textEditUserName)
         Me.Name = "FormLogin"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormLogin"
         CType(Me.textEditUserName.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.textEditPassword.Properties, System.ComponentModel.ISupportInitialize).EndInit()
