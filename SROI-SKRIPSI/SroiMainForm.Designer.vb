@@ -53,6 +53,8 @@
         Me.navBarProject = New DevExpress.XtraNavBar.NavBarItem()
         Me.NavBarProxy = New DevExpress.XtraNavBar.NavBarGroup()
         Me.navbarProxyAndDeadweight = New DevExpress.XtraNavBar.NavBarItem()
+        Me.NavBarGroup1 = New DevExpress.XtraNavBar.NavBarGroup()
+        Me.NavBarItem1 = New DevExpress.XtraNavBar.NavBarItem()
         CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemButtonEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NavBarControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -173,8 +175,8 @@
         '
         Me.NavBarControl1.ActiveGroup = Me.navBarSettings
         Me.NavBarControl1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.NavBarControl1.Groups.AddRange(New DevExpress.XtraNavBar.NavBarGroup() {Me.navbarEScope, Me.navBarImpactMap, Me.NavBarCompany, Me.navBarSettings, Me.NavBarProxy})
-        Me.NavBarControl1.Items.AddRange(New DevExpress.XtraNavBar.NavBarItem() {Me.navBarTheme, Me.navBarNewCompany, Me.navBarCompanyList, Me.navBarProject, Me.navBarMainIssue, Me.navBarStakeholders, Me.navBarInput, Me.navBarOutcome, Me.navbarProxyAndDeadweight})
+        Me.NavBarControl1.Groups.AddRange(New DevExpress.XtraNavBar.NavBarGroup() {Me.navbarEScope, Me.navBarImpactMap, Me.NavBarCompany, Me.navBarSettings, Me.NavBarProxy, Me.NavBarGroup1})
+        Me.NavBarControl1.Items.AddRange(New DevExpress.XtraNavBar.NavBarItem() {Me.navBarTheme, Me.navBarNewCompany, Me.navBarCompanyList, Me.navBarProject, Me.navBarMainIssue, Me.navBarStakeholders, Me.navBarInput, Me.navBarOutcome, Me.navbarProxyAndDeadweight, Me.NavBarItem1})
         Me.NavBarControl1.Location = New System.Drawing.Point(0, 29)
         Me.NavBarControl1.Name = "NavBarControl1"
         Me.NavBarControl1.OptionsNavPane.ExpandedWidth = 182
@@ -263,6 +265,18 @@
         Me.navbarProxyAndDeadweight.Caption = "Proxy"
         Me.navbarProxyAndDeadweight.Name = "navbarProxyAndDeadweight"
         '
+        'NavBarGroup1
+        '
+        Me.NavBarGroup1.Caption = "Report"
+        Me.NavBarGroup1.Expanded = True
+        Me.NavBarGroup1.ItemLinks.AddRange(New DevExpress.XtraNavBar.NavBarItemLink() {New DevExpress.XtraNavBar.NavBarItemLink(Me.NavBarItem1)})
+        Me.NavBarGroup1.Name = "NavBarGroup1"
+        '
+        'NavBarItem1
+        '
+        Me.NavBarItem1.Caption = "SROI Value"
+        Me.NavBarItem1.Name = "NavBarItem1"
+        '
         'SroiMainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -314,6 +328,8 @@
     Friend WithEvents navBarOutcome As DevExpress.XtraNavBar.NavBarItem
     Friend WithEvents NavBarProxy As DevExpress.XtraNavBar.NavBarGroup
     Friend WithEvents navbarProxyAndDeadweight As DevExpress.XtraNavBar.NavBarItem
+    Friend WithEvents NavBarGroup1 As DevExpress.XtraNavBar.NavBarGroup
+    Friend WithEvents NavBarItem1 As DevExpress.XtraNavBar.NavBarItem
 
 #End Region
 

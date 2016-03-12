@@ -4,7 +4,7 @@
 
     Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         isApproved = False
-        Login()
+        'Login()
 
     End Sub
 

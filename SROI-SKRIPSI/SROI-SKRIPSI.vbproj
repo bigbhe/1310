@@ -60,16 +60,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v15.2" />
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v15.2" />
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v15.2" />
     <Reference Include="DevExpress.Sparkline.v15.2.Core" />
+    <Reference Include="DevExpress.Utils.v15.2.UI, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v15.2" />
+    <Reference Include="DevExpress.XtraGauges.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraNavBar.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v15.2.Extensions, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -143,6 +152,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetProxy.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dataset\DataSetReport.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetReport.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form\CompanyDialog.Designer.vb">
       <DependentUpon>CompanyDialog.vb</DependentUpon>
     </Compile>
@@ -214,6 +228,12 @@
     <Compile Include="Form\FormProxy.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form\FormSroiReport.Designer.vb">
+      <DependentUpon>FormSroiReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormSroiReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\FormStakeholder.Designer.vb">
       <DependentUpon>FormStakeholder.vb</DependentUpon>
     </Compile>
@@ -225,6 +245,13 @@
     </Compile>
     <Compile Include="Form\FormTheme.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\ModuleReport.vb" />
+    <Compile Include="Report\ReportSROI.Designer.vb">
+      <DependentUpon>ReportSROI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportSROI.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="SROIDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -284,6 +311,9 @@
     <EmbeddedResource Include="Form\FormProxy.resx">
       <DependentUpon>FormProxy.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormSroiReport.resx">
+      <DependentUpon>FormSroiReport.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FormStakeholder.resx">
       <DependentUpon>FormStakeholder.vb</DependentUpon>
     </EmbeddedResource>
@@ -291,6 +321,9 @@
       <DependentUpon>FormTheme.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="Report\ReportSROI.resx">
+      <DependentUpon>ReportSROI.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SroiMainForm.resx">
       <DependentUpon>SroiMainForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -374,6 +407,17 @@
     </None>
     <None Include="Dataset\DataSetProxy.xss">
       <DependentUpon>DataSetProxy.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DataSetReport.xsc">
+      <DependentUpon>DataSetReport.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DataSetReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetReport.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Dataset\DataSetReport.xss">
+      <DependentUpon>DataSetReport.xsd</DependentUpon>
     </None>
     <None Include="Dataset\DataSetStakeholder.xsc">
       <DependentUpon>DataSetStakeholder.xsd</DependentUpon>
